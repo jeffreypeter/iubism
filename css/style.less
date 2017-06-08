@@ -1,11 +1,50 @@
 /* Variables for less*/
 @primary-color:#efe939;
+@secondary-color:#f47e4b;
+@black-color:#151515;
+@white-color:#fff;
+/* Utils */
+.no-padding {
+  padding: 0px !important;
+}
 
+
+
+/* Navigation */
+.navbar {
+
+  a {
+    font-weight: 400;
+    size: 18px;
+    font-family: "Merriweather", "Times New Roman", Times, serif;
+    color: @white-color !important;
+    padding: 5px;
+  }
+  a:hover {
+    color: @secondary-color !important;
+    text-decoration: none;
+  }
+  .active {
+    color: @primary-color !important;
+  }
+}
 /* Body */
 body {
   font-family: "Lato",Helvetica,Arial,sans-serif;
   font-weight: 400;
+  background-color: #9b9b9b;
+  line-height: 1.7;
 }
+a:hover {
+  color: @secondary-color;
+  text-decoration: none;
+}
+h1 {
+  font-family: "Merriweather","Times New Roman",Times,serif;
+  font-weight: 700;
+  color: @black-color;
+}
+
 /* Icons*/
 .icon {
 
@@ -26,7 +65,7 @@ body {
 
 footer {
   color: rgb(255, 255, 255);
-  background: #3f3f3f;
+  background: @black-color;
   text-align: center;
   padding: 30px 0px ;
 }
@@ -43,14 +82,47 @@ footer {
   height: 100%;
   padding-top: 150px;
   text-align: center;
-  background: #eee;
+  background: @white-color;
+
+  .about-icon {
+    font-size: 20px;
+    background: @primary-color;
+    color: @black-color;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    font-size: 34px;
+    position: relative;
+    line-height: 64px;
+  }
+  .about-shell {
+    padding: 30px 0px 20px 0px;
+  }
+  .about-item {
+    border-right: #e5e7e9 solid 1px;
+  }
+  h5 {
+    color: #151515;
+    font-weight: 700;
+  }
 }
+
 
 .services-section {
   height: 100%;
   padding-top: 150px;
   text-align: center;
-  background: #eee;
+  background: url("../images/parallex-services.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .services-shell {
+    padding: 30px;
+    background: #fff;
+    color: #9b9b9b;
+    box-shadow: 0 0 21px 0 rgba(0,0,0,0.31);
+  }
 }
 
 .contact-section {
@@ -60,9 +132,35 @@ footer {
   background: #fff;
 }
 
+.gallery-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: #f2f3f8;
+}
+
+.upcoming-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: @white-color;
+  .owl-carousel {
+    .event {
+      background-color: @secondary-color;
+      margin: 10px;
+      min-height: 200px;
+    }
+  }
+
+  .owl-dot:hover > span, .owl-dot.active > span{
+    background: #f47e4b !important;
+  }
+}
+
 /* Media */
 @media (min-width: 768px) {
   footer {
     padding: 20px 0px;
   }
 }
+

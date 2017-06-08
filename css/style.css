@@ -1,8 +1,38 @@
 /* Variables for less*/
+/* Utils */
+.no-padding {
+  padding: 0px !important;
+}
+/* Navigation */
+.navbar a {
+  font-weight: 400;
+  size: 18px;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #fff !important;
+  padding: 5px;
+}
+.navbar a:hover {
+  color: #f47e4b !important;
+  text-decoration: none;
+}
+.navbar .active {
+  color: #efe939 !important;
+}
 /* Body */
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
+  background-color: #9b9b9b;
+  line-height: 1.7;
+}
+a:hover {
+  color: #f47e4b;
+  text-decoration: none;
+}
+h1 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #151515;
 }
 /* Icons*/
 .icon-md {
@@ -19,7 +49,7 @@ body {
 }
 footer {
   color: #ffffff;
-  background: #3f3f3f;
+  background: #151515;
   text-align: center;
   padding: 30px 0px ;
 }
@@ -34,18 +64,71 @@ footer {
   height: 100%;
   padding-top: 150px;
   text-align: center;
-  background: #eee;
+  background: #fff;
+}
+.about-section .about-icon {
+  font-size: 20px;
+  background: #efe939;
+  color: #151515;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  font-size: 34px;
+  position: relative;
+  line-height: 64px;
+}
+.about-section .about-shell {
+  padding: 30px 0px 20px 0px;
+}
+.about-section .about-item {
+  border-right: #e5e7e9 solid 1px;
+}
+.about-section h5 {
+  color: #151515;
+  font-weight: 700;
 }
 .services-section {
   height: 100%;
   padding-top: 150px;
   text-align: center;
-  background: #eee;
+  background: url("../images/parallex-services.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services-section .services-shell {
+  padding: 30px;
+  background: #fff;
+  color: #9b9b9b;
+  box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.31);
 }
 .contact-section {
+  height: 100%;
   padding-top: 150px;
   text-align: center;
   background: #fff;
+}
+.gallery-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: #f2f3f8;
+}
+.upcoming-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: #fff;
+}
+.upcoming-section .owl-carousel .event {
+  background-color: #f47e4b;
+  margin: 10px;
+  min-height: 200px;
+}
+.upcoming-section .owl-dot:hover > span,
+.upcoming-section .owl-dot.active > span {
+  background: #f47e4b !important;
 }
 /* Media */
 @media (min-width: 768px) {
