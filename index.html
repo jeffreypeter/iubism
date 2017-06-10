@@ -105,8 +105,8 @@
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
-                        <p>This is a description for the first slide.</p>
+                        <h3>Bloomington International Students Ministry</h3>
+                        <p>Serving international students, scholars and their families in Bloomington</p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4 ">
-                    <div class="about-item row">
+                    <div class="about-item row no-border">
                         <div class="col-sm-3">
                             <div class="about-icon">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -208,14 +208,44 @@
                         <h1>What we do</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="card" style="width: 30rem;">
+                <div class="row ">
+                    <div class="card col-sm-6">
                         <!--<img class="card-img-top" src="..." alt="Card image cap">-->
                         <div class="card-block">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <h4 class="card-title">Airport Pickups</h4>
+                            <p class="card-text">We offer free transportation from the Indianapolis Airport(IND) to the campus of Indiana University-Bloomington to students arriving for IU's International Orientation.</p>
+                            <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
+
+                    </div>
+                    <div class="card col-sm-6">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-block">
+                            <h4 class="card-title">Shopping Trips</h4>
+                            <p class="card-text">We assist the international student and scholars to adapt to Bloomington with Walmart and winter shopping trips.</p>
+                            <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="card col-sm-6">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-block">
+                            <h4 class="card-title">Furniture Give-Away</h4>
+                            <p class="card-text">We are giving away free furniture and kitchen items to new international students, scholars, and families of all national and religious backgrounds.</p>
+                            <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="card col-sm-6">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-block">
+                            <h4 class="card-title">Join a Group</h4>
+                            <p class="card-text">Internationals from all cultural & religious background are welcome to become a part of our orgainzation.</p>
+                            <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -285,7 +315,10 @@
                                 <li><address><strong>IMU Room 772</strong><p>900 E. 7th Street, IN 47405</p></address></li>
                                 <li>
                                     <dt>Email</dt>
-                                    <dd><a class="link" href="mailto:elan@ifmusa.org">elan@ifmusa.org</a></dd>
+                                    <dd><a class="link" href="mailto:elan@ifmusa.org">elan@ifmusa.org</a><br>
+                                        <a class="link" href="mailto:huffed@indiana.edu">huffed@indiana.edu</a><br>
+                                        <a class="link" href="mailto:rahawes@indiana.edu">rahawes@indiana.edu</a>
+                                    </dd>
                                 </li>
                             </ul>
                         </div>
@@ -341,15 +374,18 @@
         $(".owl-carousel").owlCarousel(
             {
                 loop:true,
+                navigation : true,
                 pagination : false,
                 margin:10,
                 responsiveClass:true,
                 responsive:{
                     0:{
-                        items:1
+                        items:1,
+                        nav:true
                     },
                     768:{
-                        items:2
+                        items:2,
+                        nav:true
                     }
                 }
             }
@@ -371,23 +407,9 @@
 			event.preventDefault();
 		});
 	});
-    /*function renderMap() {
-        var mapCanvas = document.getElementById("map");
-        var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-        var mapOptions = {center: myCenter, zoom: 5};
-        var map = new google.maps.Map(mapCanvas,mapOptions);
-        /!*var marker = new google.maps.Marker({
-            position: myCenter,
-            icon: "pinkball.png"
-        });*!/
-        var marker = new google.maps.Marker({
-            position:myCenter,
-            animation:google.maps.Animation.BOUNCE
-        });
-        marker.setMap(map);
-    }*/
+
 	</script>
-    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ97inN-0KwN-9BEjL1rIp0unnmiutP5I&callback=renderMap"></script>-->
+
 </body>
 
 </html>

@@ -3,6 +3,9 @@
 .no-padding {
   padding: 0px !important;
 }
+.no-border {
+  border: none !important;
+}
 /* Navigation */
 .navbar a {
   font-weight: 400;
@@ -10,6 +13,7 @@
   font-family: "Merriweather", "Times New Roman", Times, serif;
   color: #fff !important;
   padding: 5px;
+  margin-right: 20px;
 }
 .navbar a:hover {
   color: #f47e4b !important;
@@ -61,8 +65,9 @@ footer {
   background: #fff;
 }
 .about-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: #fff;
 }
@@ -88,8 +93,9 @@ footer {
   font-weight: 700;
 }
 .services-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: url("../images/parallex-services.jpg");
   background-attachment: fixed;
@@ -103,9 +109,33 @@ footer {
   color: #9b9b9b;
   box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.31);
 }
+.services-section .card {
+  border: none;
+}
+.services-section .card-title {
+  font-weight: 700;
+  font-size: 25px;
+  color: #151515;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+}
+.services-section .card-text {
+  font-size: 14px;
+}
+.services-section .card-link {
+  font: 700 16px "Merriweather", "Times New Roman", Times, serif;
+  color: #151515;
+  line-height: 1.2;
+  letter-spacing: .05em;
+  vertical-align: middle;
+  transition: .22s;
+}
+.services-section .card-link:hover {
+  color: #f47e4b !important;
+}
 .contact-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: #fff;
 }

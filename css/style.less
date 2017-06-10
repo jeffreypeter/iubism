@@ -1,6 +1,8 @@
 /* Variables for less*/
 @primary-color:#efe939;
 @secondary-color:#f47e4b;
+//@primary-color:#acc4de;
+//@secondary-color:#913909;
 @black-color:#151515;
 @white-color:#fff;
 /* Utils */
@@ -8,7 +10,9 @@
   padding: 0px !important;
 }
 
-
+.no-border {
+  border:none !important;
+}
 
 /* Navigation */
 .navbar {
@@ -19,6 +23,7 @@
     font-family: "Merriweather", "Times New Roman", Times, serif;
     color: @white-color !important;
     padding: 5px;
+    margin-right: 20px;
   }
   a:hover {
     color: @secondary-color !important;
@@ -44,6 +49,7 @@ h1 {
   font-weight: 700;
   color: @black-color;
 }
+
 
 /* Icons*/
 .icon {
@@ -79,8 +85,9 @@ footer {
 }
 
 .about-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: @white-color;
 
@@ -109,8 +116,9 @@ footer {
 
 
 .services-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: url("../images/parallex-services.jpg");
   background-attachment: fixed;
@@ -123,11 +131,36 @@ footer {
     color: #9b9b9b;
     box-shadow: 0 0 21px 0 rgba(0,0,0,0.31);
   }
+  .card {
+    border: none;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 25px;
+    color: @black-color;
+    font-family: "Merriweather", "Times New Roman", Times, serif;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+  .card-link {
+    font: 700 16px "Merriweather","Times New Roman",Times,serif;
+    color: @black-color;
+    line-height: 1.2;
+    letter-spacing: .05em;
+    vertical-align: middle;
+    transition: .22s;
+
+  }
+  .card-link:hover {
+    color: @secondary-color !important;
+  }
 }
 
 .contact-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   background: #fff;
 }
