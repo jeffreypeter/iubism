@@ -8,7 +8,7 @@
 }
 /* Slider */
 .carousel-item {
-  height: 80vh;
+  height: 85vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -17,8 +17,8 @@
   background-size: cover;
 }
 #upcoming-event {
-  background-color: #efe939;
-  height: 20vh;
+  background-color: #3cafe6;
+  height: 15vh;
 }
 #upcoming-event .container {
   padding: 3vh 0;
@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 .navbar .active {
-  color: #efe939 !important;
+  color: #3cafe6 !important;
 }
 /* Body */
 body {
@@ -76,7 +76,7 @@ h1 {
   color: white;
 }
 .icon-social:hover {
-  color: #efe939;
+  color: #3cafe6;
 }
 .text-bold {
   font-weight: 700;
@@ -103,7 +103,7 @@ footer {
 }
 .about-section .about-icon {
   font-size: 20px;
-  background: #efe939;
+  background: #3cafe6;
   color: #151515;
   border-radius: 100%;
   width: 64px;
@@ -161,12 +161,6 @@ footer {
 }
 .services-section .card-link:hover {
   color: #f47e4b !important;
-}
-.contact-section {
-  height: auto;
-  padding-top: 100px;
-  text-align: center;
-  background: #fff;
 }
 .gallery-section {
   height: auto;
@@ -239,7 +233,7 @@ footer {
 }
 .events-section .news-letter h4 {
   font-family: "Merriweather", "Times New Roman", Times, serif;
-  color: #efe939;
+  color: #3cafe6;
 }
 .events-section .news-letter p {
   color: #fff;
@@ -251,7 +245,7 @@ footer {
 .events-section .news-letter button {
   background-color: #151515;
   border-color: #151515;
-  color: #efe939;
+  color: #3cafe6;
   transition: background 0.4s, border-color 0.4s, color 0.4s;
 }
 .events-section .news-letter input[type="button"]:hover,
@@ -260,6 +254,12 @@ footer {
   border-color: #f47e4b;
   color: #fff;
   cursor: pointer;
+}
+.contact-section {
+  height: auto;
+  padding-top: 100px;
+  text-align: center;
+  background: rgba(79, 78, 78, 0.94);
 }
 /* Media */
 @media (min-width: 768px) {
