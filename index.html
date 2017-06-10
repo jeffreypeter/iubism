@@ -20,10 +20,17 @@
     <!-- Owl Carousel-->
     <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.theme.default.css">
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="vendor/photo-swipe/photoswipe.css">
 
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="vendor/photo-swipe/default-skin/default-skin.css">
     <!-- Custom styles-->
 	<link href="css/style.css" rel="stylesheet">
-    <link href="css/full-slider.css" rel="stylesheet">
+
 	<link href="css/scrolling-nav.css" rel="stylesheet">
 
     <style>
@@ -58,6 +65,15 @@
 
         }
     }
+     /* Photo Swipe*/
+
+     .my-gallery figure {
+         margin: 0 5px 5px 0;
+         width: 150px;
+     }
+     .my-gallery figcaption {
+         display: none;
+     }
     </style>
 
 </head>
@@ -65,7 +81,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" role="navigation">
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" role="navigation">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,6 +98,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Gallery</a>
@@ -103,7 +122,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item active" style="background-image: url('images/carousel/slider-1.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Bloomington International Students Ministry</h3>
                         <p>Serving international students, scholars and their families in Bloomington</p>
@@ -132,6 +151,30 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+
+        </div>
+        <div id="upcoming-event">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>
+                            Upcoming Event
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 text-sm-left">
+                        Spotlight on Summer (SOS)
+                        is an opportunity to meet in a local American home
+                        for a relaxing time of food, friendship, and
+                        discussion of short films that explore spiritual questions.
+                    </div>
+                    <div class="col-sm-2">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -189,7 +232,7 @@
                         <div class="col-sm-9 text-left">
                             <div class="card-block no-padding">
                                 <h5 class="card-title">New People</h5>
-                                <p class="card-text">Visit our church and meet dozens of new friends, all of whom follow the “love thy neighbor” principle!</p>
+                                <p class="card-text">Visit our ____ and meet dozens of new friends, all of whom follow the “love thy neighbor” principle!</p>
                             </div>
                         </div>
                     </div>
@@ -252,15 +295,15 @@
         </div>
     </section>
 
-    <!-- Upcoming Events -->
-    <section id="upcoming" class="upcoming-section">
+    <!-- Events -->
+    <section id="events" class="events-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Upcoming Events</h1>
+                    <h1>Events</h1>
                     <div class="owl-carousel owl-theme">
                         <div class="event">
-                            <div class="card" style="width: 30rem;">
+                            <div class="card" style="width: 10rem;">
                                 <!--<img class="card-img-top" src="..." alt="Card image cap">-->
                                 <div class="card-block">
                                     <h4 class="card-title">Card title</h4>
@@ -270,7 +313,17 @@
                             </div>
                         </div>
                         <div class="event">
-                            <div class="card" style="width: 30rem;">
+                            <div class="card" style="width: 10rem;">
+                                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                                <div class="card-block">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="card" style="width: 10rem;">
                                 <!--<img class="card-img-top" src="..." alt="Card image cap">-->
                                 <div class="card-block">
                                     <h4 class="card-title">Card title</h4>
@@ -283,6 +336,26 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid news-letter" style="background-color: #4DC7A0">
+            <div class="row shell">
+               <div class="container">
+                   <h4 class="text-sm-left">BISM Newsletter</h4>
+                   <div class="row">
+                       <div class="col-sm-8">
+                           <p>Sign up for the free Email newsletter and we'll keep you informed about BISM events and activities.</p>
+                       </div>
+                       <div class="col-sm-4">
+                           <div class="form-inline row form-group">
+                               <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="your@email.com">
+                               <button class="form-control"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+                           </div>
+                       </div>
+                       <!--<small class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                   </div>
+               </div>
+            </div>
+
+        </div>
     </section>
 
 
@@ -291,25 +364,103 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Gallery Section</h1>
+                    <h1>Our Gallery</h1>
                 </div>
             </div>
+
+            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/1.jpg" itemprop="contentUrl" data-size="960x638">
+                                <img src="images/gallery/1.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Image caption  1</figcaption>
+
+                        </figure>
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/2.jpg" itemprop="contentUrl" data-size="960x540">
+                                <img src="images/gallery/2.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Image caption 2</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/3.jpg" itemprop="contentUrl" data-size="1053x557">
+                                <img src="images/gallery/3.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Fall Cookout</figcaption>
+                        </figure>
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/4.jpg" itemprop="contentUrl" data-size="1600x1200">
+                                <img src="images/gallery/4.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Image caption  1</figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/5.jpg" itemprop="contentUrl" data-size="873x564">
+                                <img src="images/gallery/5.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Image caption 2</figcaption>
+                        </figure>
+
+                    </div>
+
+
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-7" style="background-color: #2aabd2">
-                    <h2>Map PlaceHolder</h2>
-                    <div id="map"></div>
+                <div class="col-sm-12">
+                    <h1>Contact us</h1>
                 </div>
-                <div class="col-sm-5 text-left">
-                    <div style="padding: 20px">
-                        <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="container">
+                        <form id="contact-form" action="php/mail.php">
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="* Your name...">
+                            </div>
+                            <div class="form-group">
+                                <div class="controls">
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="* Your email...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls">
+                                    <textarea class="form-control" name="comment" id="comment" placeholder="* Comments..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls">
+                                    <button id="send-mail" class="form-control">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-left">
+                    <div style="padding: 0 20px">
+                        <!--<div class="row">
                             <h2>Contact Us</h2>
-                        </div>
+                        </div>-->
                         <div class="row">
                             <ul class="list-unstyled">
                                 <li><address><strong>IMU Room 772</strong><p>900 E. 7th Street, IN 47405</p></address></li>
@@ -322,21 +473,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="row">
-                            <div class="card" style="width: 30rem;">
-                                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-                                <div class="card-block">
-                                    <h4 class="card-title">BISM Newsletter</h4>
-                                    <p class="card-text">Sign up for the free Email newsletter
-                                        and we'll keep you informed about BISM activities.</p>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
-                                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                        <input type="button" class="btn btn-primary" value="Join">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -361,7 +498,76 @@
             </div>
         </div>
     </footer>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+        <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Core JS file -->
+    <script src="vendor/photo-swipe/photoswipe.min.js"></script>
+    <!-- UI JS file -->
+    <script src="vendor/photo-swipe/photoswipe-ui-default.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/jquery/jquery.easing.min.js"></script>
@@ -374,18 +580,16 @@
         $(".owl-carousel").owlCarousel(
             {
                 loop:true,
-                navigation : true,
-                pagination : false,
                 margin:10,
                 responsiveClass:true,
                 responsive:{
                     0:{
                         items:1,
-                        nav:true
+                        nav:false
                     },
                     768:{
                         items:2,
-                        nav:true
+                        nav:false
                     }
                 }
             }
@@ -409,7 +613,214 @@
 	});
 
 	</script>
+    <!-- Photo Swipe -->
+    <script type="application/javascript">
+        var initPhotoSwipeFromDOM = function(gallerySelector) {
 
+            // parse slide data (url, title, size ...) from DOM elements
+            // (children of gallerySelector)
+            var parseThumbnailElements = function(el) {
+                var thumbElements = el.childNodes,
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+                for(var i = 0; i < numNodes; i++) {
+
+                    figureEl = thumbElements[i]; // <figure> element
+
+                    // include only element nodes
+                    if(figureEl.nodeType !== 1) {
+                        continue;
+                    }
+
+                    linkEl = figureEl.children[0]; // <a> element
+
+                    size = linkEl.getAttribute('data-size').split('x');
+
+                    // create slide object
+                    item = {
+                        src: linkEl.getAttribute('href'),
+                        w: parseInt(size[0], 10),
+                        h: parseInt(size[1], 10)
+                    };
+
+
+
+                    if(figureEl.children.length > 1) {
+                        // <figcaption> content
+                        item.title = figureEl.children[1].innerHTML;
+                    }
+
+                    if(linkEl.children.length > 0) {
+                        // <img> thumbnail element, retrieving thumbnail url
+                        item.msrc = linkEl.children[0].getAttribute('src');
+                    }
+
+                    item.el = figureEl; // save link to element for getThumbBoundsFn
+                    items.push(item);
+                }
+
+                return items;
+            };
+
+            // find nearest parent element
+            var closest = function closest(el, fn) {
+                return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+            };
+
+            // triggers when user clicks on thumbnail
+            var onThumbnailsClick = function(e) {
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                var eTarget = e.target || e.srcElement;
+
+                // find root element of slide
+                var clickedListItem = closest(eTarget, function(el) {
+                    return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                });
+
+                if(!clickedListItem) {
+                    return;
+                }
+
+                // find index of clicked item by looping through all child nodes
+                // alternatively, you may define index via data- attribute
+                var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+
+                for (var i = 0; i < numChildNodes; i++) {
+                    if(childNodes[i].nodeType !== 1) {
+                        continue;
+                    }
+
+                    if(childNodes[i] === clickedListItem) {
+                        index = nodeIndex;
+                        break;
+                    }
+                    nodeIndex++;
+                }
+
+
+
+                if(index >= 0) {
+                    // open PhotoSwipe if valid index found
+                    openPhotoSwipe( index, clickedGallery );
+                }
+                return false;
+            };
+
+            // parse picture index and gallery index from URL (#&pid=1&gid=2)
+            var photoswipeParseHash = function() {
+                var hash = window.location.hash.substring(1),
+                    params = {};
+
+                if(hash.length < 5) {
+                    return params;
+                }
+
+                var vars = hash.split('&');
+                for (var i = 0; i < vars.length; i++) {
+                    if(!vars[i]) {
+                        continue;
+                    }
+                    var pair = vars[i].split('=');
+                    if(pair.length < 2) {
+                        continue;
+                    }
+                    params[pair[0]] = pair[1];
+                }
+
+                if(params.gid) {
+                    params.gid = parseInt(params.gid, 10);
+                }
+
+                return params;
+            };
+
+            var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+                items = parseThumbnailElements(galleryElement);
+
+                // define options (if needed)
+                options = {
+
+                    // define gallery index (for URL)
+                    galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                    getThumbBoundsFn: function(index) {
+                        // See Options -> getThumbBoundsFn section of documentation for more info
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+                        return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                    }
+
+                };
+
+                // PhotoSwipe opened from URL
+                if(fromURL) {
+                    if(options.galleryPIDs) {
+                        // parse real index when custom PIDs are used
+                        // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                        for(var j = 0; j < items.length; j++) {
+                            if(items[j].pid == index) {
+                                options.index = j;
+                                break;
+                            }
+                        }
+                    } else {
+                        // in URL indexes start from 1
+                        options.index = parseInt(index, 10) - 1;
+                    }
+                } else {
+                    options.index = parseInt(index, 10);
+                }
+
+                // exit if index not found
+                if( isNaN(options.index) ) {
+                    return;
+                }
+
+                if(disableAnimation) {
+                    options.showAnimationDuration = 0;
+                }
+
+                // Pass data to PhotoSwipe and initialize it
+                gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            };
+
+            // loop through all gallery elements and bind events
+            var galleryElements = document.querySelectorAll( gallerySelector );
+
+            for(var i = 0, l = galleryElements.length; i < l; i++) {
+                galleryElements[i].setAttribute('data-pswp-uid', i+1);
+                galleryElements[i].onclick = onThumbnailsClick;
+            }
+
+            // Parse URL and open gallery if it contains #&pid=3&gid=1
+            var hashData = photoswipeParseHash();
+            if(hashData.pid && hashData.gid) {
+                openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+            }
+        };
+
+        // execute above function
+        initPhotoSwipeFromDOM('.my-gallery');
+    </script>
 </body>
 
 </html>

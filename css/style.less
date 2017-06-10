@@ -1,5 +1,6 @@
 /* Variables for less*/
 @primary-color:#efe939;
+//@primary-color:#366092;
 @secondary-color:#f47e4b;
 //@primary-color:#acc4de;
 //@secondary-color:#913909;
@@ -14,7 +15,41 @@
   border:none !important;
 }
 
+
+/* Slider */
+.carousel-item {
+  height: 80vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#upcoming-event {
+  background-color: @primary-color;
+  height: 20vh;
+  .container {
+    padding: 3vh 0;
+  }
+}
 /* Navigation */
+@media(min-width:767px) {
+  .navbar {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.38);
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+    padding: 0;
+    background-color: @black-color;
+  }
+}
+
 .navbar {
 
   a {
@@ -160,21 +195,61 @@ footer {
 .contact-section {
   height: auto;
   padding-top: 100px;
-  padding-bottom: 50px;
+  //padding-bottom: 50px;
   text-align: center;
   background: #fff;
 }
 
 .gallery-section {
-  height: 100%;
-  padding-top: 150px;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
-  background: #f2f3f8;
+  background: @white-color;
+  figure {
+    /*width: 295px;
+    height: 270px;*/
+    @media screen and (min-width: 540px) {
+      width: 400px;
+      height: auto;
+    }
+    &:focus img,&:hover img {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    &:hover img:before,
+    &:focus img:before {
+      display: block;
+    }
+  }
+   img {
+    width:100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+     &::before {
+       content: "";
+       display: none;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background-color: rgba(52, 73, 94, 0.75);
+     }
+  }
+
+
+  h1 {
+    padding-bottom: 10px;
+  }
+
 }
 
-.upcoming-section {
-  height: 100%;
-  padding-top: 150px;
+.events-section {
+  height: auto;
+  padding-top: 100px;
   text-align: center;
   background: @white-color;
   .owl-carousel {
@@ -187,6 +262,39 @@ footer {
 
   .owl-dot:hover > span, .owl-dot.active > span{
     background: #f47e4b !important;
+  }
+  .news-letter {
+    .shell {
+      padding: 20px 0;
+      background: url("../images/parallex-subscribe.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h4 {
+      font-family: "Merriweather", "Times New Roman", Times, serif;
+      color: @primary-color;
+    }
+    p {
+      color: @white-color;
+    }
+    input,button {
+      border-radius: 0;
+    }
+    button {
+      background-color: @black-color;
+      border-color: @black-color;
+      color: @primary-color;
+      transition: background 0.4s,border-color 0.4s,color 0.4s;
+    }
+    input[type="button"]:hover,button:hover{
+      background-color: @secondary-color;
+      border-color: @secondary-color;
+      color: @white-color;
+      cursor: pointer;
+    }
+
   }
 }
 
