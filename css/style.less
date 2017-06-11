@@ -1,5 +1,6 @@
 /* Variables for less*/
 //@primary-color:#efe939;
+//@primary-color:#0275d8;
 @primary-color:#3cafe6;
 //@primary-color:#366092;
 @secondary-color:#f47e4b;
@@ -8,7 +9,8 @@
 //@secondary-color:#913909;
 @black-color:#151515;
 @white-color:#fff;
-@grey-color:rgba(79, 78, 78, 0.94);
+@grey-color:#8b8b8b;
+@min-size:320px;
 /* Utils */
 .no-padding {
   padding: 0px !important;
@@ -18,6 +20,13 @@
   border:none !important;
 }
 
+.transition(@seconds){
+  webkit-transition: all @seconds ease-in-out;
+  -moz-transition: all @seconds ease-in-out;
+  -ms-transition: all @seconds ease-in-out;
+  -o-transition: all @seconds ease-in-out;
+  transition: all @seconds ease-in-out;
+}
 
 /* Slider */
 .carousel-item {
@@ -96,22 +105,9 @@ h1 {
 .icon-md {
   font-size: 26px
 }
-.icon-social {
-  color: white;
-}
-.icon-social:hover {
-  color: @primary-color;
-}
 
 .text-bold {
   font-weight: 700;
-}
-
-footer {
-  color: rgb(255, 255, 255);
-  background: @black-color;
-  text-align: center;
-  padding: 30px 0px ;
 }
 
 /* Sections*/
@@ -204,8 +200,9 @@ footer {
   figure {
     /*width: 295px;
     height: 270px;*/
+
     @media screen and (min-width: 540px) {
-      width: 400px;
+      width: 300px;
       height: auto;
     }
     &:focus img,&:hover img {
@@ -296,15 +293,103 @@ footer {
 .contact-section {
   height: auto;
   padding-top: 100px;
-  //padding-bottom: 50px;
+  padding-bottom: 50px;
   text-align: center;
-  background: @grey-color;
-}
-
-/* Media */
-@media (min-width: 768px) {
-  footer {
-    padding: 20px 0px;
+  background: url("../images/bg-footer.jpg") no-repeat left top/cover;
+  h4 {
+    color: @white-color;
+    font-weight: 500;
   }
-}
+  .footer-address-box {
+    padding: 10px;
+    form {
+      p {
+        color: #8b8b8b;
+      }
+    }
+    address {
+      padding: 10px 5px;
+      width: 300px;
+      color: @white-color;
+      strong {
+        padding: 0;
+        font-weight: 400;
+      }
+      i {
+        margin: 10px;
+        font-size: 30px;
+        position: absolute;
+        left: 15px;
+      }
+      ul li {
+        padding: 0 0 0 60px;
+      }
+    }
+    .icon-social {
+      color: white;
+      font-size: 50px;
+      .transition(.5s);
+    }
+    .icon-social:hover {
+      color: @secondary-color;
+    }
+  }
+  input[type="text"] {
+    float: left;
+    width: 100%;
+    border: 0;
+    height: 55px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background: none;
+  }
+  textarea {
+    float: left;
+    width: 100%;
+    border: 0;
+    height: 130px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #fff;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background: none;
+    resize: none;
+  }
+  // TODO Fix Position for mobile devices
+  input[type="submit"] {
+    float: right;
+    border: 1px solid;
+    font: 400 16px/16px 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    position: relative;
+    background: none;
+    color: @primary-color;
+    border-color: @primary-color;
+    webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-appearance: button;
+    cursor: pointer;
+    &:hover {
+      border-color: @secondary-color;
+      background-color: @secondary-color;
+      color:@white-color;
+    }
+  }
 
+}
+footer {
+  color:@white-color;
+  background: @primary-color;
+  text-align: center;
+  padding: 5px 0px ;
+}

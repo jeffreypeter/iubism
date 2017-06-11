@@ -72,20 +72,8 @@ h1 {
 .icon-md {
   font-size: 26px;
 }
-.icon-social {
-  color: white;
-}
-.icon-social:hover {
-  color: #3cafe6;
-}
 .text-bold {
   font-weight: 700;
-}
-footer {
-  color: #ffffff;
-  background: #151515;
-  text-align: center;
-  padding: 30px 0px ;
 }
 /* Sections*/
 .intro-section {
@@ -175,7 +163,7 @@ footer {
 }
 @media screen and (min-width: 540px) {
   .gallery-section figure {
-    width: 400px;
+    width: 300px;
     height: auto;
   }
 }
@@ -258,12 +246,103 @@ footer {
 .contact-section {
   height: auto;
   padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
-  background: rgba(79, 78, 78, 0.94);
+  background: url("../images/bg-footer.jpg") no-repeat left top / cover;
 }
-/* Media */
-@media (min-width: 768px) {
-  footer {
-    padding: 20px 0px;
-  }
+.contact-section h4 {
+  color: #fff;
+  font-weight: 500;
+}
+.contact-section .footer-address-box {
+  padding: 10px;
+}
+.contact-section .footer-address-box form p {
+  color: #8b8b8b;
+}
+.contact-section .footer-address-box address {
+  padding: 10px 5px;
+  width: 300px;
+  color: #fff;
+}
+.contact-section .footer-address-box address strong {
+  padding: 0;
+  font-weight: 400;
+}
+.contact-section .footer-address-box address i {
+  margin: 10px;
+  font-size: 30px;
+  position: absolute;
+  left: 15px;
+}
+.contact-section .footer-address-box address ul li {
+  padding: 0 0 0 60px;
+}
+.contact-section .footer-address-box .icon-social {
+  color: white;
+  font-size: 50px;
+  webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.contact-section .footer-address-box .icon-social:hover {
+  color: #f47e4b;
+}
+.contact-section input[type="text"] {
+  float: left;
+  width: 100%;
+  border: 0;
+  height: 55px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background: none;
+}
+.contact-section textarea {
+  float: left;
+  width: 100%;
+  border: 0;
+  height: 130px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #fff;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background: none;
+  resize: none;
+}
+.contact-section input[type="submit"] {
+  float: right;
+  border: 1px solid;
+  font: 400 16px/16px 'Roboto', sans-serif;
+  text-align: center;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  position: relative;
+  background: none;
+  color: #3cafe6;
+  border-color: #3cafe6;
+  webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.contact-section input[type="submit"]:hover {
+  border-color: #f47e4b;
+  background-color: #f47e4b;
+  color: #fff;
+}
+footer {
+  color: #fff;
+  background: #3cafe6;
+  text-align: center;
+  padding: 5px 0px ;
 }

@@ -65,12 +65,6 @@
 
         }
     }
-     /* Photo Swipe*/
-
-     .my-gallery figure {
-         margin: 0 5px 5px 0;
-         width: 150px;
-     }
      .my-gallery figcaption {
          display: none;
      }
@@ -117,8 +111,8 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
@@ -129,19 +123,19 @@
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <!--<div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Second Slide</h3>
                         <p>This is a description for the second slide.</p>
                     </div>
                 </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
+                &lt;!&ndash; Slide Three - Set the background image for this slide in the line below &ndash;&gt;
                 <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Third Slide</h3>
                         <p>This is a description for the third slide.</p>
                     </div>
-                </div>
+                </div>-->
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -369,7 +363,7 @@
 
             <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                 <div class="row">
-                    <div class="col-lg-4">
+
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <a href="images/gallery/1.jpg" itemprop="contentUrl" data-size="960x638">
                                 <img src="images/gallery/1.jpg" itemprop="thumbnail" alt="Image description" />
@@ -384,9 +378,9 @@
                             </a>
                             <figcaption itemprop="caption description">Image caption 2</figcaption>
                         </figure>
-                    </div>
 
-                    <div class="col-lg-4">
+
+
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <a href="images/gallery/3.jpg" itemprop="contentUrl" data-size="1053x557">
                                 <img src="images/gallery/3.jpg" itemprop="thumbnail" alt="Image description" />
@@ -401,10 +395,6 @@
 
                         </figure>
 
-                    </div>
-
-                    <div class="col-lg-4">
-
 
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <a href="images/gallery/5.jpg" itemprop="contentUrl" data-size="873x564">
@@ -412,8 +402,14 @@
                             </a>
                             <figcaption itemprop="caption description">Image caption 2</figcaption>
                         </figure>
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/gallery/7.jpg" itemprop="contentUrl" data-size="873x564">
+                                <img src="images/gallery/7.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Image caption 2</figcaption>
+                        </figure>
 
-                    </div>
+
 
 
                 </div>
@@ -426,45 +422,63 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h1>Contact us</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="container">
-                        <form id="contact-form" action="php/mail.php">
-                            <div class="form-group">
-                                <input class="form-control" type="text" id="name" name="name" placeholder="* Your name...">
-                            </div>
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input class="form-control" type="email" name="email" id="email" placeholder="* Your email...">
+                        <form action="#">
+                            <h4 class="text-center text-sm-left text-bold">Get in touch</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Name*" required="">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="controls">
-                                    <textarea class="form-control" name="comment" id="comment" placeholder="* Comments..."></textarea>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Email*" required="">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="controls">
-                                    <button id="send-mail" class="form-control">Send message</button>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Phone*" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Subject*" required="">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea required="" cols="10" rows="10" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn-style-1" value="Send Message">
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-sm-6 text-left">
-                    <div style="padding: 0 20px">
-                        <!--<div class="row">
+                    <div class="footer-address-box">
+                        <h4 class="text-center text-sm-left">Contact&nbsp;us</h4>
+                        <address>
+                            <ul class="list-unstyled">
+                                <li> <i class="fa fa-map-marker" aria-hidden="true"></i> <strong>IMU Room 772, 900 E. 7th Street, IN 47405</strong> </li>
+                                <li> <p><i class="fa fa-mobile" aria-hidden="true"></i>+660 252265866 - Main Office </p></li>
+                                <li> <i class="fa fa-envelope-o" aria-hidden="true"></i> <a class="link" href="mailto:elan@ifmusa.org">elan@ifmusa.org</a> <a class="link" href="mailto:huffed@indiana.edu">huffed@indiana.edu</a></li>
+                            </ul>
+                        </address>
+
+                            <h4 class="text-center text-sm-left">Follow&nbsp;Us:</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-facebook-square icon-social" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+
+                        <div class="footer-map-box">
+                        </div>
+                    </div>
+                    <!--<div style="padding: 0 20px">
+                        &lt;!&ndash;<div class="row">
                             <h2>Contact Us</h2>
-                        </div>-->
+                        </div>&ndash;&gt;
                         <div class="row">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><address><strong>IMU Room 772</strong><p>900 E. 7th Street, IN 47405</p></address></li>
+                                <li></i><address><strong></strong><p></p></address></li>
                                 <li>
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
                                     <dd><a class="link" href="mailto:elan@ifmusa.org">elan@ifmusa.org</a><br>
                                         <a class="link" href="mailto:huffed@indiana.edu">huffed@indiana.edu</a><br>
                                         <a class="link" href="mailto:rahawes@indiana.edu">rahawes@indiana.edu</a>
@@ -473,7 +487,7 @@
                             </ul>
                         </div>
 
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -483,16 +497,8 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="align-bottom col-sm-6 text-sm-left">
+                <div class="col-sm-12 text-center">
                     <span>BISM&nbsp;©&nbsp;2017</span>
-                </div>
-                <div class="align-bottom col-sm-6 text-sm-right">
-                    <span class="text-bold d-inline">Follow&nbsp;Us:&nbsp;&nbsp;&nbsp;</span>
-                    <ul class="list-inline d-inline">
-                        <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-facebook-square icon-social" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="icon-md icon-social"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
