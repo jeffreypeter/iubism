@@ -67,8 +67,12 @@ header {
   }
   #upcoming-event {
     background-color: @white-color;
+    .container-fluid {
+      box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+    }
     .left-shell,.right-shell {
       .transition(.5s);
+
       padding: 20px 0 30px 0;
       border-right: 1px solid #ebebeb;
       font-size: 18px;
@@ -84,6 +88,7 @@ header {
         //width: 80%;
         h5 {
           color: @primary-color !important;
+          font-weight: 700;
         }
         p {
           color: @grey-color;
@@ -350,22 +355,26 @@ header {
         font-weight: 400;
       }
       i {
-        margin: 10px;
         font-size: 30px;
-        position: absolute;
-        left: 15px;
+        margin: 0 20px 0 10px;
       }
       ul li {
-        padding: 0 0 0 60px;
+        padding: 10px;
+        display: flex;
       }
+
     }
     .icon-social {
-      color: white;
-      font-size: 50px;
-      .transition(.5s);
-    }
-    .icon-social:hover {
-      color: @secondary-color;
+      display: flex;
+      i {
+        margin: 5px 15px 0 0;
+        color: white;
+        font-size: 50px;
+        .transition(.3s);
+        &:hover {
+          color: @secondary-color;
+        }
+      }
     }
   }
   input[type="text"] {
