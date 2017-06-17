@@ -4,7 +4,7 @@ body {
   height: 100%;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background-color: #9b9b9b;
+  background-color: #151515;
   line-height: 1.7;
 }
 a:hover {
@@ -127,25 +127,7 @@ header #upcoming-event .right-shell:hover {
   height: auto;
   padding-top: 100px;
   padding-bottom: 50px;
-  text-align: center;
-  background: #f1f1f1;
-}
-.about-section .about-icon {
-  font-size: 20px;
-  border: #8b8b8b solid 2px;
-  color: #3cafe6;
-  border-radius: 100%;
-  width: 64px;
-  height: 64px;
-  font-size: 34px;
-  position: relative;
-  line-height: 64px;
-}
-.about-section .about-shell {
-  padding: 30px 0px 20px 0px;
-}
-.about-section .about-item {
-  border-right: #e5e7e9 solid 1px;
+  background: #fff;
 }
 .about-section h5 {
   color: #151515;
@@ -153,20 +135,8 @@ header #upcoming-event .right-shell:hover {
 }
 .services-section {
   height: auto;
-  padding-top: 100px;
   padding-bottom: 50px;
   text-align: center;
-  background: url("../images/parallex-services.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.services-section .services-shell {
-  padding: 30px;
-  background: #fff;
-  color: #9b9b9b;
-  box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.31);
 }
 .services-section .card {
   border: none;
@@ -182,7 +152,7 @@ header #upcoming-event .right-shell:hover {
 }
 .services-section .card-link {
   font: 700 16px "Merriweather", "Times New Roman", Times, serif;
-  color: #151515;
+  color: #3cafe6;
   line-height: 1.2;
   letter-spacing: .05em;
   vertical-align: middle;
@@ -239,46 +209,191 @@ header #upcoming-event .right-shell:hover {
 }
 .events-section {
   height: auto;
-  padding-top: 100px;
   text-align: center;
-  background: #fff;
+  background-color: #f1f1f1;
+  /*  background: url(../images/parallex-event.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  /*.owl-carousel {
+    .event {
+      background-color: @secondary-color;
+      margin: 10px;
+      min-height: 200px;
+    }
+  }
+
+  .owl-dot:hover > span, .owl-dot.active > span{
+    background: #f47e4b !important;
+  }*/
 }
-.events-section .owl-carousel .event {
-  background-color: #f47e4b;
+.events-section .events {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.events-section .events .event {
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .events-section .events .event {
+    height: 164px;
+  }
+}
+.events-section .events .event .date-holder {
+  color: #6b6b6b;
+  font: 300 60px 'Roboto', sans-serif;
+  padding: 0 15px;
+  flex-grow: 1;
+}
+.events-section .events .event .date-holder span {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+}
+.events-section .events .event .image-holder {
+  flex-grow: 1;
+}
+.events-section .events .event .image-holder img {
+  width: 100%;
+}
+.events-section .events .event .content-holder {
+  margin: 0 0 10px 0;
+  flex-grow: 2;
+  padding: 5px;
+}
+.events-section .events .event .content-holder h3 {
+  font: 700 20px/24px 'Roboto', sans-serif;
+  color: #605f64 !important;
+  margin: 0 0 15px 0;
+}
+.events-section .events .event .content-holder p {
+  font: 300 14px/14px 'Roboto', sans-serif;
+}
+.events-section .events .event .action-holder {
+  flex-grow: 1;
+  padding: 5px;
   margin: 10px;
-  min-height: 200px;
 }
-.events-section .owl-dot:hover > span,
-.events-section .owl-dot.active > span {
-  background: #f47e4b !important;
+.events-section .events .event .action-holder a {
+  display: block;
+  border: 1px solid #3cafe6;
+  font: 400 16px/16px 'Roboto', sans-serif;
+  color: #3cafe6;
+  text-align: center;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.events-section .news-letter .shell {
-  padding: 20px 0;
+.events-section .events .event .action-holder a:hover {
+  background-color: #f47e4b;
+  border-color: #f47e4b;
+  color: #fff;
+}
+.events-section .event-main {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.events-section .event-main .shell {
+  background-color: #fff;
+  height: 90%;
+}
+@media (min-width: 576px) {
+  .events-section .event-main .shell {
+    padding: 10px;
+    width: 315px;
+  }
+}
+.about-items-section {
+  padding-bottom: 50px;
+  text-align: center;
+  height: auto;
+  background-color: #fff;
+}
+.about-items-section .card-block {
+  margin-top: 20px;
+  width: 100%;
+}
+.about-items-section .about-icon {
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border: #8b8b8b solid 2px;
+  color: #3cafe6;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  font-size: 34px;
+  position: relative;
+  line-height: 64px;
+}
+.about-items-section .about-icon i {
+  webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.about-items-section .about-icon:hover i {
+  font-size: 40px;
+}
+.about-items-section .about-shell {
+  padding: 30px 0px 20px 0px;
+}
+.about-items-section .about-item {
+  border-right: #e5e7e9 solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+.news-letter-section {
+  padding-top: 20px;
   background: url("../images/parallex-subscribe.jpg");
+  background-color: rgba(0, 0, 0, 0.8);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.events-section .news-letter h4 {
-  font-family: "Merriweather", "Times New Roman", Times, serif;
-  color: #3cafe6;
+.news-letter-section .shell {
+  padding: 10px 0 0 0;
 }
-.events-section .news-letter p {
+.news-letter-section h4 {
+  color: #3cafe6;
+  font-weight: 500;
+}
+.news-letter-section p {
+  font-size: 15px;
+  padding: 5px;
+  margin: 0 0 2px 0 !important;
   color: #fff;
 }
-.events-section .news-letter input,
-.events-section .news-letter button {
+.news-letter-section input,
+.news-letter-section button {
   border-radius: 0;
 }
-.events-section .news-letter button {
+.news-letter-section button {
   background-color: #151515;
-  border-color: #151515;
+  border-color: #3cafe6;
   color: #3cafe6;
   transition: background 0.4s, border-color 0.4s, color 0.4s;
 }
-.events-section .news-letter input[type="button"]:hover,
-.events-section .news-letter button:hover {
+.news-letter-section input[type="button"]:hover,
+.news-letter-section button:hover {
   background-color: #f47e4b;
   border-color: #f47e4b;
   color: #fff;
@@ -386,7 +501,7 @@ header #upcoming-event .right-shell:hover {
 }
 footer {
   color: #fff;
-  background: #3cafe6;
+  background: rgba(0, 0, 0, 0.86);
   text-align: center;
   padding: 5px 0px ;
 }

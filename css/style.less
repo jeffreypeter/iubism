@@ -11,14 +11,19 @@
 @white-color:#fff;
 @dull-color:#f1f1f1;
 @grey-color:#8b8b8b;
+@tran-grey-color:rgba(0,0,0,0.1);
 @min-size:320px;
+@sm-width:576px;
+@md-width:768px;
+@lg-width:992px;
+@xl-width:1200px;
 
 body {
   width: 100%;
   height: 100%;
   font-family: "Lato",Helvetica,Arial,sans-serif;
   font-weight: 400;
-  background-color: #9b9b9b;
+  background-color: @black-color;
   line-height: 1.7;
 
 }
@@ -160,52 +165,39 @@ header {
   height: auto;
   padding-top: 100px;
   padding-bottom: 50px;
-  text-align: center;
-  background: @dull-color;
+  background: @white-color;
+  @media(min-width: @sm-width) {
 
-  .about-icon {
-    font-size: 20px;
-    //background: @primary-color;
-    border: @grey-color solid 2px;
-    color: @primary-color;
-    border-radius: 100%;
-    width: 64px;
-    height: 64px;
-    font-size: 34px;
-    position: relative;
-    line-height: 64px;
-  }
-  .about-shell {
-    padding: 30px 0px 20px 0px;
-  }
-  .about-item {
-    border-right: #e5e7e9 solid 1px;
   }
   h5 {
     color: #151515;
     font-weight: 700;
   }
+
 }
 
 
 .services-section {
   height: auto;
-  padding-top: 100px;
+  //padding-top: 100px;
   padding-bottom: 50px;
   text-align: center;
-  background: url("../images/parallex-services.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  //background: url("../images/parallex-services.jpg");
+  //background-attachment: fixed;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+
   .services-shell {
-    padding: 30px;
-    background: #fff;
-    color: #9b9b9b;
-    box-shadow: 0 0 21px 0 rgba(0,0,0,0.31);
+
+    //padding: 30px;
+    //background: #fff;
+    //color: #9b9b9b;
+    //box-shadow: 0 0 21px 0 rgba(0,0,0,0.31);
   }
   .card {
     border: none;
+    //margin: 10px;
   }
   .card-title {
     font-weight: 700;
@@ -218,7 +210,7 @@ header {
   }
   .card-link {
     font: 700 16px "Merriweather","Times New Roman",Times,serif;
-    color: @black-color;
+    color: @primary-color;
     line-height: 1.2;
     letter-spacing: .05em;
     vertical-align: middle;
@@ -280,10 +272,107 @@ header {
 
 .events-section {
   height: auto;
-  padding-top: 100px;
+  //padding-top: 100px;
   text-align: center;
-  background: @white-color;
-  .owl-carousel {
+  background-color: #f1f1f1;
+/*  background: url(../images/parallex-event.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+
+  .events {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .event {
+      display: flex;
+      background-color: @white-color;
+      overflow: hidden;
+
+      margin-bottom: 25px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      @media(min-width: @lg-width) {
+        height: 164px;
+      }
+      .date-holder {
+        color: #6b6b6b;
+        font: 300 60px 'Roboto', sans-serif;
+        padding: 0 15px;
+        flex-grow: 1;
+        span {
+          display: block;
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+      .image-holder {
+        flex-grow: 1;
+        img {
+          width: 100%;
+        }
+
+      }
+      .content-holder {
+
+        margin: 0 0 10px 0;
+        flex-grow: 2;
+        padding: 5px;
+        h3 {
+          font: 700 20px/24px 'Roboto', sans-serif;
+          color: #605f64 !important;
+          margin: 0 0 15px 0;
+        }
+        p {
+          font: 300 14px/14px 'Roboto', sans-serif;
+        }
+      }
+      .action-holder {
+        flex-grow: 1;
+        padding: 5px;
+        margin: 10px;
+        a {
+          display: block;
+          border: 1px solid @primary-color;
+          font: 400 16px/16px 'Roboto', sans-serif;
+          color: @primary-color;
+          text-align: center;
+          padding: 20px 25px;
+          text-transform: uppercase;
+          .transition(.3s);
+
+          &:hover {
+            background-color: @secondary-color;
+            border-color: @secondary-color;
+            color: @white-color;
+          }
+        }
+
+      }
+    }
+  }
+
+  .event-main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    .shell {
+      background-color: @white-color;
+      height: 90%;
+
+      @media (min-width: 576px) {
+
+        padding: 10px;
+        width: 315px;
+      }
+    }
+  }
+  /*.owl-carousel {
     .event {
       background-color: @secondary-color;
       margin: 10px;
@@ -293,40 +382,98 @@ header {
 
   .owl-dot:hover > span, .owl-dot.active > span{
     background: #f47e4b !important;
+  }*/
+
+}
+
+.about-items-section {
+  //padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  height: auto;
+  background-color: @white-color;
+  .card-block {
+    margin-top: 20px;
+    width: 100%;
   }
-  .news-letter {
-    .shell {
-      padding: 20px 0;
-      background: url("../images/parallex-subscribe.jpg");
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    h4 {
-      font-family: "Merriweather", "Times New Roman", Times, serif;
-      color: @primary-color;
-    }
-    p {
-      color: @white-color;
-    }
-    input,button {
-      border-radius: 0;
-    }
-    button {
-      background-color: @black-color;
-      border-color: @black-color;
-      color: @primary-color;
-      transition: background 0.4s,border-color 0.4s,color 0.4s;
-    }
-    input[type="button"]:hover,button:hover{
-      background-color: @secondary-color;
-      border-color: @secondary-color;
-      color: @white-color;
-      cursor: pointer;
+  .about-icon {
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    //background: @primary-color;
+    border: @grey-color solid 2px;
+    color: @primary-color;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    font-size: 34px;
+    position: relative;
+    line-height: 64px;
+    i {
+      .transition(.2s);
     }
 
+    &:hover{
+      i {
+        font-size: 40px;
+
+      }
+    }
   }
+  .about-shell {
+
+    padding: 30px 0px 20px 0px;
+  }
+  .about-item {
+
+    border-right: #e5e7e9 solid 1px;
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+.news-letter-section {
+  padding-top: 20px;
+  background: url("../images/parallex-subscribe.jpg");
+  background-color: rgba(0,0,0,0.8);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .shell {
+    padding: 10px 0 0 0;
+
+    //background-color: @black-color;
+  }
+  h4 {
+    //font-family: "Merriweather", "Times New Roman", Times, serif;
+    color: @primary-color;
+    font-weight: 500;
+  }
+  p {
+    font-size: 15px;
+    padding: 5px;
+    margin: 0 0 2px 0 !important;
+    color: @white-color;
+  }
+  input,button {
+    border-radius: 0;
+    //border-width: 1px;
+    //border-color: @primary-color;
+  }
+  button {
+    background-color: @black-color;
+    border-color: @primary-color;
+    color: @primary-color;
+    transition: background 0.4s,border-color 0.4s,color 0.4s;
+  }
+  input[type="button"]:hover,button:hover{
+    background-color: @secondary-color;
+    border-color: @secondary-color;
+    color: @white-color;
+    cursor: pointer;
+  }
+
 }
 
 .contact-section {
@@ -432,7 +579,7 @@ header {
 }
 footer {
   color:@white-color;
-  background: @primary-color;
+  background: rgba(0,0,0,0.86);
   text-align: center;
   padding: 5px 0px ;
 }
