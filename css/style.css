@@ -2,19 +2,37 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   background-color: #151515;
   line-height: 1.7;
+}
+body .primary-color {
+  color: #3cafe6;
 }
 a:hover {
   color: #f47e4b;
   text-decoration: none;
 }
 h1 {
-  font-family: "Merriweather", "Times New Roman", Times, serif;
-  font-weight: 700;
+  font: 300 36px/36px 'Roboto', sans-serif;
   color: #151515;
+  display: block;
+}
+h1 .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h1 .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
 }
 .no-padding {
   padding: 0px !important;
@@ -22,75 +40,97 @@ h1 {
 .no-border {
   border: none !important;
 }
-html {
-  width: 100%;
-  height: 100%;
-}
 header {
   /* Slider */
+  /*#upcoming-event {
+    background-color: @white-color;
+    .container-fluid {
+      box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+    .left-shell,.right-shell {
+      .transition(.5s);
+
+      padding: 20px 0 30px 0;
+      border-right: 1px solid #ebebeb;
+      font-size: 18px;
+      !*float: right;*!
+      //width: 100%;
+      display: flex;
+      .icon {
+        //width: 20%;
+        font-size: 35px !important;
+        padding: 0px 20px;
+      }
+      .text-shell {
+        //width: 80%;
+        h5 {
+          color: @primary-color !important;
+          font-weight: 700;
+        }
+        p {
+          color: @grey-color;
+        }
+      }
+      @media(min-width:767px) {
+        height: 15vh;
+        .container {
+          padding: 3vh 0;
+        }
+      }
+      &:hover {
+        background-color: @dull-color;
+        cursor: pointer;
+      }
+    }
+
+  }*/
+}
+header .carousel-indicators {
+  display: none;
 }
 header .carousel-item {
-  height: 85vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
 }
-header #upcoming-event {
-  background-color: #fff;
-}
-header #upcoming-event .container-fluid {
-  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
-}
-header #upcoming-event .left-shell,
-header #upcoming-event .right-shell {
-  webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  padding: 20px 0 30px 0;
-  border-right: 1px solid #ebebeb;
-  font-size: 18px;
-  /*float: right;*/
-  display: flex;
-}
-header #upcoming-event .left-shell .icon,
-header #upcoming-event .right-shell .icon {
-  font-size: 35px !important;
-  padding: 0px 20px;
-}
-header #upcoming-event .left-shell .text-shell h5,
-header #upcoming-event .right-shell .text-shell h5 {
-  color: #3cafe6 !important;
-  font-weight: 700;
-}
-header #upcoming-event .left-shell .text-shell p,
-header #upcoming-event .right-shell .text-shell p {
-  color: #8b8b8b;
-}
-@media (min-width: 767px) {
-  header #upcoming-event .left-shell,
-  header #upcoming-event .right-shell {
-    height: 15vh;
-  }
-  header #upcoming-event .left-shell .container,
-  header #upcoming-event .right-shell .container {
-    padding: 3vh 0;
+@media (min-width: 576px) {
+  header .carousel-item {
+    background-size: cover;
+    height: 100vh;
   }
 }
-header #upcoming-event .left-shell:hover,
-header #upcoming-event .right-shell:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
+header .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 10%;
+  right: 10%;
+  bottom: 10px;
+  padding: 10px 10px 10px 20px;
+}
+header a.button {
+  border: solid #3cafe6 2px;
+  padding: 10px 20px;
+  font: 700 14px/14px 'Roboto', sans-serif;
+  color: #3cafe6;
+  text-decoration: none;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+header a.button:hover {
+  background-color: #f47e4b;
+  color: white;
+  border-color: #f47e4b;
 }
 /* Navigation */
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.38);
+    background-color: rgba(0, 0, 0, 0.8);
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -125,13 +165,82 @@ header #upcoming-event .right-shell:hover {
 /* Sections*/
 .about-section {
   height: auto;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 80px;
   background: #fff;
+}
+.about-section .tag-line {
+  font: 300 24px/30px 'Roboto', sans-serif;
+  color: #6b6b6b;
+  display: block;
+  padding: 0 0 5px 0;
+}
+.about-section figure {
+  border: solid #3cafe6 1px;
+}
+.about-section img {
+  width: 100%;
 }
 .about-section h5 {
   color: #151515;
   font-weight: 700;
+}
+.about-items-section {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  text-align: center;
+  height: auto;
+  background-color: #fff;
+}
+.about-items-section .card-title {
+  font: 400 28px 'Roboto', sans-serif;
+  color: #605f64;
+  margin: 0 0 15px 0;
+  display: block;
+  text-align: center;
+}
+.about-items-section .card-block {
+  margin-top: 20px;
+  width: 100%;
+}
+.about-items-section .card-block .card-text {
+  font: 400 16px/24px 'Roboto', sans-serif;
+  color: #6b6b6b;
+}
+.about-items-section .card-block .card-link {
+  color: #3cafe6 !important;
+}
+.about-items-section .card-block .card-link:hover {
+  color: #f47e4b !important;
+}
+.about-items-section .about-icon {
+  font-size: 50px;
+  margin: 0 auto;
+  border: #8b8b8b solid 2px;
+  color: #3cafe6;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  line-height: 100px;
+}
+.about-items-section .about-icon i {
+  webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.about-items-section .about-icon:hover i {
+  font-size: 60px;
+  color: #f47e4b;
+}
+.about-items-section .about-shell {
+  padding: 30px 0px 20px 0px;
+}
+.about-items-section .about-item {
+  display: flex;
+  flex-direction: column;
 }
 .services-section {
   height: auto;
@@ -210,12 +319,30 @@ header #upcoming-event .right-shell:hover {
 .events-section {
   height: auto;
   text-align: center;
-  background-color: #f1f1f1;
-  /*  background: url(../images/parallex-event.png);
+  background: url(../images/parallex-event.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;*/
+  background-size: cover;
+  /*.event-main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    .shell {
+      background-color: @white-color;
+      height: 90%;
+
+      @media (min-width: 576px) {
+
+        padding: 10px;
+        width: 315px;
+      }
+    }
+  }*/
   /*.owl-carousel {
     .event {
       background-color: @secondary-color;
@@ -229,143 +356,146 @@ header #upcoming-event .right-shell:hover {
   }*/
 }
 .events-section .events {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
-.events-section .events .event {
-  display: flex;
-  background-color: #fff;
-  overflow: hidden;
-  margin-bottom: 25px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
 @media (min-width: 992px) {
-  .events-section .events .event {
-    height: 164px;
+  .events-section .events {
+    min-height: 80vh;
   }
 }
-.events-section .events .event .date-holder {
-  color: #6b6b6b;
-  font: 300 60px 'Roboto', sans-serif;
-  padding: 0 15px;
-  flex-grow: 1;
+.events-section .events #view-all {
+  float: right;
+  font: 400 14px/14px 'Roboto', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0 0 0;
 }
-.events-section .events .event .date-holder span {
-  display: block;
-  font-size: 24px;
-  text-align: center;
+.events-section .events h1 {
+  margin: 20px 0px;
 }
-.events-section .events .event .image-holder {
-  flex-grow: 1;
+.events-section .events .event {
+  margin: 10px 0px;
+  background-color: #fff;
+  height: 165px;
 }
-.events-section .events .event .image-holder img {
+.events-section .events .event .image-box {
+  width: 100%;
+  overflow: hidden;
+}
+.events-section .events .event .image-box img {
   width: 100%;
 }
-.events-section .events .event .content-holder {
-  margin: 0 0 10px 0;
-  flex-grow: 2;
-  padding: 5px;
-}
-.events-section .events .event .content-holder h3 {
-  font: 700 20px/24px 'Roboto', sans-serif;
-  color: #605f64 !important;
-  margin: 0 0 15px 0;
-}
-.events-section .events .event .content-holder p {
-  font: 300 14px/14px 'Roboto', sans-serif;
-}
-.events-section .events .event .action-holder {
-  flex-grow: 1;
-  padding: 5px;
-  margin: 10px;
-}
-.events-section .events .event .action-holder a {
-  display: block;
-  border: 1px solid #3cafe6;
-  font: 400 16px/16px 'Roboto', sans-serif;
-  color: #3cafe6;
+.events-section .events .event .image-box .date {
+  padding: 4px 0;
+  width: 90px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  font: 500 30px/30px 'Roboto', sans-serif;
+  color: #fff;
   text-align: center;
-  padding: 20px 25px;
+}
+.events-section .events .event .image-box .date span {
+  font-size: 14px;
+}
+.events-section .events .event .text-box {
+  padding: 10px 5px 5px 10px;
+}
+.events-section .events .event .text-box a {
+  font: 700 20px/20px 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #605f64;
+  display: block;
+  padding: 0 0 15px 0;
+  text-align: left;
+}
+.events-section .events .event .text-box span {
+  font: 300 14px/14px 'Roboto', sans-serif;
+  display: block;
+  text-align: left;
+  color: #6b6b6b;
+  padding: 0 0 18px 0;
+}
+.events-section .events .event .text-box a.button {
+  font: 700 14px/14px 'Roboto', sans-serif;
+  float: right;
+  color: #3cafe6;
+  text-decoration: none;
   text-transform: uppercase;
+  margin: 15px 30px 0 0;
   webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.events-section .events .event .action-holder a:hover {
-  background-color: #f47e4b;
+.events-section .events .event .text-box a.button:hover {
+  color: #f47e4b;
+}
+.events-section .upcoming-event {
+  border-top: solid #3cafe6 3px;
+  padding: 100px 20px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.events-section .upcoming-event .shell {
+  background-color: #fff;
+  min-width: 320px;
+  padding: 50px 10px;
+}
+.events-section .upcoming-event .shell .text-box h3 {
+  text-align: center;
+  color: #605f64;
+  font: 700 20px/30px 'Roboto', sans-serif;
+  padding: 0 0 10px 0;
+}
+.events-section .upcoming-event .shell .text-box .date {
+  color: #3cafe6;
+  display: block;
+  text-align: center;
+  font: 400 14px/14px 'Roboto', sans-serif;
+  padding: 0 0 10px 0;
+}
+.events-section .upcoming-event .shell .text-box p {
+  font: 400 16px/24px 'Roboto', sans-serif;
+  color: #6b6b6b;
+  margin: 0 0 20px 0;
+  text-align: center;
+  padding: 10px;
+}
+.events-section .upcoming-event .shell .text-box .button {
+  border: 1px solid #3cafe6;
+  font: 400 16px/16px 'Roboto', sans-serif;
+  color: #3cafe6;
+  text-align: center;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 11;
+  webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.events-section .upcoming-event .shell .text-box .button:hover {
   border-color: #f47e4b;
+  background-color: #f47e4b;
   color: #fff;
 }
-.events-section .event-main {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-}
-.events-section .event-main .shell {
-  background-color: #fff;
-  height: 90%;
-}
-@media (min-width: 576px) {
-  .events-section .event-main .shell {
-    padding: 10px;
-    width: 315px;
-  }
-}
-.about-items-section {
-  padding-bottom: 50px;
-  text-align: center;
-  height: auto;
-  background-color: #fff;
-}
-.about-items-section .card-block {
-  margin-top: 20px;
-  width: 100%;
-}
-.about-items-section .about-icon {
-  font-size: 20px;
-  margin: 0 auto;
-  text-align: center;
-  border: #8b8b8b solid 2px;
-  color: #3cafe6;
-  border-radius: 100%;
-  width: 64px;
-  height: 64px;
-  font-size: 34px;
-  position: relative;
-  line-height: 64px;
-}
-.about-items-section .about-icon i {
-  webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.about-items-section .about-icon:hover i {
-  font-size: 40px;
-}
-.about-items-section .about-shell {
-  padding: 30px 0px 20px 0px;
-}
-.about-items-section .about-item {
-  border-right: #e5e7e9 solid 1px;
-  display: flex;
-  flex-direction: column;
-}
 .news-letter-section {
-  padding-top: 20px;
+  border-top: solid #3cafe6 3px;
+  padding: 20px 0;
   background: url("../images/parallex-subscribe.jpg");
   background-color: rgba(0, 0, 0, 0.8);
   background-attachment: fixed;
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -400,6 +530,7 @@ header #upcoming-event .right-shell:hover {
   cursor: pointer;
 }
 .contact-section {
+  border-top: solid #3cafe6 3px;
   height: auto;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -500,6 +631,7 @@ header #upcoming-event .right-shell:hover {
   color: #fff;
 }
 footer {
+  border-top: solid #3cafe6 3px;
   color: #fff;
   background: rgba(0, 0, 0, 0.86);
   text-align: center;

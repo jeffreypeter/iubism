@@ -79,7 +79,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="container">
-        <a class="navbar-brand nav-link" href="#">Start Bootstrap</a>
+        <a class="navbar-brand nav-link" href="#">BISM</a>
         <div class="collapse navbar-collapse" id="navbarExample">
             <ul class="navbar-nav ml-auto">
 
@@ -89,9 +89,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="#events">Events</a>
                 </li>
@@ -117,10 +117,17 @@
             <!-- Slide One - Set the background image for this slide in the line below -->
             <div class="carousel-item active" style="background-image: url('images/carousel/slider-1.jpg')">
                 <div class="carousel-caption d-none d-md-block">
+                    <h5 class="primary-color">BISM Holiday World Trip</h5>
+                    <p>Join us for a fun trip to a theme park in Southern Indiana on June 29. Registration closes on June 27 or when the trip is full.</p>
+                    <!--<a href="#" class="button">Read More</a>-->
+                </div>
+            </div>
+            <!--<div class="carousel-item" style="background-image: url('images/carousel/slider-2.jpg')">
+                <div class="carousel-caption d-none d-md-block">
                     <h3>Bloomington International Students Ministry</h3>
                     <p>Serving international students, scholars and their families in Bloomington</p>
                 </div>
-            </div>
+            </div>-->
             <!-- Slide Two - Set the background image for this slide in the line below -->
             <!--<div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                 <div class="carousel-caption d-none d-md-block">
@@ -146,15 +153,15 @@
         </a>
 
     </div>
-    <div id="upcoming-event">
+    <!--<div id="upcoming-event">
         <div class="container-fluid">
-            <!--<div class="row">
+            &lt;!&ndash;<div class="row">
                 <div class="col-sm-12">
                     <h4>
                         Upcoming Event
                     </h4>
                 </div>
-            </div>-->
+            </div>&ndash;&gt;
             <div class="row">
                 <div class="col-sm-6 text-sm-left no-padding">
                     <a class="left-shell justify-content-start justify-content-sm-center" href="#">
@@ -178,36 +185,43 @@
             </div>
         </div>
 
-    </div>
+    </div>-->
 </header>
 
 <!-- Page Content -->
 <section id="about" class="about-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h1>About Us</h1>
+            <div class="col-sm-4 photo-swipe" itemscope itemtype="http://schema.org/ImageGallery">
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="images/about-us.jpg" itemprop="contentUrl" data-size="1432x855">
+                        <img src="images/about-us.jpg">
+                    </a>
+                <!--<figcaption itemprop="caption description">International Sunday 2017</figcaption>-->
+                </figure>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                BISM provides services and activities that encourage all internationals at IU to develop friendships, enjoy American culture, and, if interested, grow in understanding of the Christian faith. Students from all countries and religious backgrounds are welcome to participate in any activities that interest them, and all services are offered in an atmosphere of friendship and respect.
+            <div class="col-lg-8">
+                <div class="row"><h1>About Us<span class="heading-left">&nbsp;</span></h1></div>
+                <div class="row">
+                    <p class="tag-line">We exist to serve international students, scholars and their families in Bloomington.</p>
+                    <p>BISM provides services and activities that encourage all internationals at IU to develop friendships, enjoy American culture, and, if interested, grow in understanding of the Christian faith.</p></div>
             </div>
         </div>
     </div>
 </section>
 <section class="about-items-section">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row about-shell">
             <div class="col-sm-4 ">
                 <div class="about-item">
                     <div class="about-icon">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </div>
-
                     <div class="card-block no-padding">
                         <h5 class="card-title">Friendly Atmosphere</h5>
-                        <p class="card-text">We are happy to welcome anyone, with our community feeling acceptive of all kinds of people!</p>
+                        <p class="card-text">Internationals from all culture & religion are welcome to our events.</p>
+                        <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -218,7 +232,8 @@
                     </div>
                     <div class="card-block no-padding">
                         <h5 class="card-title">Interesting Events</h5>
-                        <p class="card-text">BISM has a long schedule of fascinating and _______ events, all to _______ -boost- your _______!</p>
+                        <p class="card-text">BISM has a long schedule of fun and fascinating events.</p>
+                        <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -228,8 +243,9 @@
                         <i class="fa fa-heart" aria-hidden="true"></i>
                     </div>
                     <div class="card-block no-padding">
-                        <h5 class="card-title">New People</h5>
-                        <p class="card-text">Visit our ____ and meet dozens of new friends, all of whom follow the “love thy neighbor” principle!</p>
+                        <h5 class="card-title">Join us</h5>
+                        <p class="card-text">You are welcome to become a part of our organization.</p>
+                        <a class="card-link" href="#" >Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -303,63 +319,83 @@
 
 <!-- Events -->
 <section id="events" class="events-section">
-    <div class="container ">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-7">
+
                 <div class="events">
-                    <h1 class="text-left">Our Events</h1>
-                    <div class="event justify-content-center">
-                        <div class="image-holder">
-                            <img src="images/image-holder.jpg">
+                    <div class="row">
+                        <h1 class="text-left">Our Events<span class="heading-left">&nbsp;</span></h1>
+                        <div id="view-all"><a href="">View all Events</a></div>
+                    </div>
+                    <div class="event row">
+                        <div class="image-box col-sm-3 no-padding">
+                            <img src="images/events/event-1-temp.jpg">
+                            <span class="date">18 <span>July</span></span>
                         </div>
-                        <div class="date-holder">15<span>Jun</span></div>
-                        <div class="content-holder text-sm-left">
+                        <div class="col-sm-9">
+                            <div class="text-box">
+                                <a href="#">Join us throughout the week to serve our city.</a> <span>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </span>
+                                <a href="#" class="button">Register Now <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                        <div class="info-box" style="display: none">
 
-                            <h3><a href="#">SOS</a></h3>
-                            <!--<p>Join us an opportunity to meet in a local American home
-                                for a relaxing time of food, friendship, and
-                                discussion of short films that explore spiritual questions.</p>-->
-                            <p>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </p>
-                        </div>
-                        <div class="action-holder">
-                            <a href="#">Register</a>
                         </div>
                     </div>
-                    <div class="event justify-content-center">
-                        <div class="image-holder">
-                            <img src="images/image-holder.jpg">
+                    <div class="event row">
+                        <div class="image-box col-sm-3 no-padding">
+                            <img src="images/events/event-1-temp.jpg">
+                            <span class="date">18 <span>July</span></span>
                         </div>
-                        <div class="date-holder">15<span>Jun</span></div>
-                        <div class="content-holder text-sm-left">
+                        <div class="col-sm-9">
+                            <div class="text-box">
+                                <a href="#">Join us throughout the week to serve our city.</a> <span>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </span>
+                                <a href="#" class="button">Register Now <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box" style="display: none">
 
-                            <h3><a href="#">SOS</a></h3>
-                            <!--<p>Join us an opportunity to meet in a local American home
-                                for a relaxing time of food, friendship, and
-                                discussion of short films that explore spiritual questions.</p>-->
-                            <p>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </p>
-                        </div>
-                        <div class="action-holder">
-                            <a href="#">Register</a>
                         </div>
                     </div>
-                    <div class="event justify-content-center">
-                        <div class="image-holder">
-                            <img src="images/image-holder.jpg">
+                    <div class="event row">
+                        <div class="image-box col-sm-3 no-padding">
+                            <img src="images/events/event-1-temp.jpg">
+                            <span class="date">18 <span>July</span></span>
                         </div>
-                        <div class="date-holder">15<span>Jun</span></div>
-                        <div class="content-holder text-sm-left">
+                        <div class="col-sm-9">
+                            <div class="text-box">
+                                <a href="#">Join us throughout the week to serve our city.</a> <span>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </span>
+                                <a href="#" class="button">Register Now <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                        <div class="info-box" style="display: none">
 
-                            <h3><a href="#">SOS</a></h3>
-                            <!--<p>Join us an opportunity to meet in a local American home
-                                for a relaxing time of food, friendship, and
-                                discussion of short films that explore spiritual questions.</p>-->
-                            <p>Saturday, 10:00 am - 2:00 pm Upcoming. State Route </p>
-                        </div>
-                        <div class="action-holder">
-                            <a href="#">Register</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-5 no-padding">
+                <div class="upcoming-event">
+                    <!--<h2>Next Upcoming Event</h2>-->
+                    <div class="shell">
+                        <div class="text-box">
+
+                            <h3 class="title">Join us throughout the week to serve our city.</h3> <span class="date">Saturday, 10:00 am - 2:00 pm Upcoming. State Route </span>
+                            <p>Maecenas porttitor neque eu sem nullam lectus neque, blandit quis mattis quis varius eu eros. Vivamus ads metus auris at tellus at sapien.</p>
+                            <a href="#" class="button">See full Detail</a>
+
+                        </div>
+
+                       <!-- <div class="text-box">
+
+                            <h3 class="title">Join us throughout the week to serve our city.</h3> <span class="date">Saturday, 10:00 am - 2:00 pm Upcoming. State Route </span>
+                            <p>Maecenas porttitor neque eu sem nullam lectus neque, blandit quis mattis quis varius eu eros. Vivamus ads metus auris at tellus at sapien.</p>
+                            <a href="#" class="button">See full Detail</a>
+
+                        </div>-->
+
+                    </div>
+                </div>
+
             </div>
             <!--<div class="col-sm-5 no-padding">
 
@@ -476,14 +512,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Our Gallery</h1>
+                <h1>Our Gallery<span class="heading-center">&nbsp;</span></h1>
             </div>
         </div>
 
         <div class="my-gallery" >
-
-
-
             <div class="eventpic">
                 <a href="https://get.google.com/albumarchive/111396174924976916781/album/AF1QipNp0zQe1EFWTBcv1jG5Dp-9qbI-cTHu8deUbalt" >
                     <img src="images/FGAmain.jpg"  alt="Image description" />
@@ -1057,7 +1090,7 @@
     };
 
     // execute above function
-    initPhotoSwipeFromDOM('.my-gallery');
+    initPhotoSwipeFromDOM('.photo-swipe');
 </script>
 </body>
 
