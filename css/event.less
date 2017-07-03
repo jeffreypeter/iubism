@@ -1,0 +1,78 @@
+@import "site-wide";
+
+body {
+  background: @white-color;
+}
+.navbar {
+  padding: 10px !important;
+}
+
+section {
+  min-height: 50vh;
+  padding: 50px 0;
+}
+
+
+header {
+  background-color: @grey-color;
+
+  .image-holder {
+    min-height: 50vh;
+    background: url('../images/events/headers/SOS-logo.gif');
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#details {
+  h3 {
+    font: 300 30px/30px @font-family;
+    color: @primary-color;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .shell {
+    padding: 40px;
+    .border-primary(3px);
+    background-color: rgba(0,0,0,0.7 );
+    .event-details {
+      color: @white-color;
+      li {
+        display: flex;
+        padding: 5px;
+        i {
+          font-size: 24px;
+          width: 25px;
+        }
+        p {
+          margin-left: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  button {
+    border: 1px solid;
+    font: 400 16px/16px 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    position: relative;
+    background: none;
+    color: @primary-color;
+    border-color: @primary-color;
+    &:hover {
+      cursor: pointer;
+      color: @white-color;
+      background-color: @secondary-color;
+      border-color: @secondary-color;
+    }
+  }
+
+}
+#gallery {
+  min-height: 50vh;
+  background-color: @grey-color !important;
+}
