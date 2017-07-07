@@ -135,7 +135,9 @@ h1 .heading-center {
 .contact-section .footer-address-box .icon-social i:hover {
   color: #f47e4b;
 }
-.contact-section input[type="text"] {
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section input[type="tel"] {
   float: left;
   width: 100%;
   border: 0;
@@ -399,45 +401,105 @@ header a.button:hover {
   padding-bottom: 50px;
   text-align: center;
   background: #fff;
+  /*figure {
+    !*width: 295px;
+    height: 270px;*!
+
+    @media screen and (min-width: 540px) {
+      width: 300px;
+      height: auto;
+    }
+    &:focus img,&:hover img {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    &:hover img:before,
+    &:focus img:before {
+      display: block;
+    }
+  }*/
+  /*img {
+    width:100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+     &::before {
+       content: "";
+       display: none;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background-color: rgba(52, 73, 94, 0.75);
+     }
+  }*/
 }
-.gallery-section figure {
-  /*width: 295px;
-    height: 270px;*/
-}
-@media screen and (min-width: 540px) {
-  .gallery-section figure {
-    width: 300px;
-    height: auto;
-  }
-}
-.gallery-section figure:focus img,
-.gallery-section figure:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-.gallery-section figure:hover img:before,
-.gallery-section figure:focus img:before {
+.gallery-section a {
   display: block;
 }
-.gallery-section img {
+.gallery-section .thumbnail {
+  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
   width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
-.gallery-section img::before {
-  content: "";
-  display: none;
-  height: 100%;
-  width: 100%;
+.gallery-section .thumbnail:hover .overlay {
+  height: 25%;
+}
+.gallery-section .thumbnail .image-box {
+  height: 250px;
+  display: block;
+  overflow: hidden;
+}
+.gallery-section .thumbnail .image-box img {
+  max-height: 100%;
+}
+.gallery-section .thumbnail .overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  background-color: rgba(52, 73, 94, 0.75);
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.gallery-section .text {
+  white-space: nowrap;
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 .gallery-section h1 {
   padding-bottom: 10px;
+}
+.gallery-section .filter-button {
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid #3cafe6;
+  text-align: center;
+  color: #3cafe6;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.gallery-section .filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #f47e4b;
+  text-align: center;
+  color: #fff;
+  background-color: #f47e4b;
+}
+.gallery-section .btn-default:active .filter-button:active {
+  background-color: #f47e4b;
+  color: white;
 }
 .events-section {
   height: auto;
@@ -653,53 +715,16 @@ header a.button:hover {
   cursor: pointer;
 }
 /* My Gallery */
-@media (min-width: 900px) {
+/*@media (min-width:900px)
+{
+
+
   .my-gallery {
-    display: flex;
+
+
+    display:flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
   }
-}
-.my-gallery img {
-  border-radius: 8px;
-  width: 100%;
-  height: 250px;
-}
-.eventpic {
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  flex: 1;
-  flex-grow: 1;
-  flex-basis: 30%;
-  position: relative;
-  width: 50%;
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-}
-.eventpic:hover .overlay {
-  height: 25%;
-}
-.text {
-  white-space: nowrap;
-  color: black;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
+}*/
