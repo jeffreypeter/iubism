@@ -164,13 +164,11 @@ h1 .heading-center {
   resize: none;
 }
 .contact-section input[type="submit"] {
-  float: right;
-  border: 1px solid;
   font: 400 16px/16px 'Roboto', sans-serif;
   text-align: center;
   padding: 20px 25px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  position: relative;
   background: none;
   color: #3cafe6;
   border-color: #3cafe6;
@@ -223,7 +221,9 @@ header .image-holder {
 }
 #details .shell {
   padding: 40px;
-  border-top: solid #3cafe6 3px;
+  border-width: 3px 0px 0px 0px;
+  border-color: #3cafe6;
+  border-style: solid;
   background-color: rgba(0, 0, 0, 0.7);
 }
 #details .shell .event-details {
