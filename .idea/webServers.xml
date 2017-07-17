@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="96338005-62db-4fd9-9228-83b9039505b8" name="iubism" url="http://iubism.org">
+        <fileTransfer host="ftp.iubism.org" port="21" rootFolder="/public_html/iubism">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
