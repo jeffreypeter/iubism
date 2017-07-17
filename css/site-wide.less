@@ -80,9 +80,9 @@ body {
 }
 
 
-a:hover {
+a:hover,a:focus {
   color: @secondary-color;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .no-padding {
@@ -100,12 +100,13 @@ a:hover {
   -o-transition: all @seconds ease-in-out;
   transition: all @seconds ease-in-out;
 }
-.border-primary(@width) {
-  border-top: solid @primary-color @width;
-}
 
-h1 {
-  font: 300 36px/36px @font-family;
+.border-primary(@top, @right,@bottom,@left) {
+  border-width: @top @right @bottom @left;
+  border-color: @primary-color;
+  border-style: solid;
+}
+.heading {
   color: @black-color;
   display: block;
   .heading-left {
@@ -123,6 +124,14 @@ h1 {
     background-color: @primary-color;
     height: 2px;
   }
+}
+h1 {
+  .heading;
+  font: 300 36px/36px @font-family;
+}
+h2 {
+  .heading;
+  font: 300 30px/30px @font-family;
 }
 
 .contact-section {
@@ -202,13 +211,11 @@ h1 {
   }
   // TODO Fix Position for mobile devices
   input[type="submit"] {
-    float: right;
-    border: 1px solid;
     font: 400 16px/16px 'Roboto', sans-serif;
     text-align: center;
     padding: 20px 25px;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    position: relative;
     background: none;
     color: @primary-color;
     border-color: @primary-color;

@@ -8,7 +8,7 @@
 
   //Email information
 
-  $admin_email = "admin@iubism.org";
+  $admin_email = "elan@ifmusa.org";
 
 $fname=$_POST['name'];
 

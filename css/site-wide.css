@@ -54,9 +54,10 @@ body .carousel-item-prev {
 .navbar .active {
   color: #3cafe6 !important;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #f47e4b;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .no-padding {
   padding: 0px !important;
@@ -64,10 +65,29 @@ a:hover {
 .no-border {
   border: none !important;
 }
-h1 {
-  font: 300 36px/36px 'Roboto', sans-serif;
+.heading {
   color: #151515;
   display: block;
+}
+.heading .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+.heading .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h1 {
+  color: #151515;
+  display: block;
+  font: 300 36px/36px 'Roboto', sans-serif;
 }
 h1 .heading-left {
   margin: 10px 0;
@@ -77,6 +97,26 @@ h1 .heading-left {
   height: 2px;
 }
 h1 .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h2 {
+  color: #151515;
+  display: block;
+  font: 300 30px/30px 'Roboto', sans-serif;
+}
+h2 .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h2 .heading-center {
   position: relative;
   margin: 10px auto;
   width: 10%;
@@ -164,13 +204,11 @@ h1 .heading-center {
   resize: none;
 }
 .contact-section input[type="submit"] {
-  float: right;
-  border: 1px solid;
   font: 400 16px/16px 'Roboto', sans-serif;
   text-align: center;
   padding: 20px 25px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  position: relative;
   background: none;
   color: #3cafe6;
   border-color: #3cafe6;

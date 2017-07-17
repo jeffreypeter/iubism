@@ -7,18 +7,27 @@ body {
   padding: 10px !important;
 }
 
+.tag-line {
+  font: 300 20px/26px @font-family;
+  color: #6b6b6b;
+  display: block;
+  padding: 10px 0;
+}
+
 section {
   min-height: 50vh;
   padding: 50px 0;
+  img {
+    width: 100%;
+  }
 }
 
 
 header {
-  background-color: @grey-color;
+  background-color: @white-color;
 
   .image-holder {
     min-height: 50vh;
-    background: url('../images/events/headers/SOS-logo.gif');
     background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,9 +42,12 @@ header {
     display: block;
     margin-bottom: 10px;
   }
+  .accordion {
+    padding-bottom: 20px;
+  }
   .shell {
     padding: 40px;
-    .border-primary(3px);
+    .border-primary(3px,0px,0px,0px);
     background-color: rgba(0,0,0,0.7 );
     .event-details {
       color: @white-color;
@@ -53,7 +65,8 @@ header {
       }
     }
   }
-  button {
+  .register {
+    width: 100%;
     border: 1px solid;
     font: 400 16px/16px 'Roboto', sans-serif;
     text-align: center;

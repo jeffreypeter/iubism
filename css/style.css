@@ -54,9 +54,10 @@ body .carousel-item-prev {
 .navbar .active {
   color: #3cafe6 !important;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #f47e4b;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .no-padding {
   padding: 0px !important;
@@ -64,10 +65,29 @@ a:hover {
 .no-border {
   border: none !important;
 }
-h1 {
-  font: 300 36px/36px 'Roboto', sans-serif;
+.heading {
   color: #151515;
   display: block;
+}
+.heading .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+.heading .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h1 {
+  color: #151515;
+  display: block;
+  font: 300 36px/36px 'Roboto', sans-serif;
 }
 h1 .heading-left {
   margin: 10px 0;
@@ -77,6 +97,26 @@ h1 .heading-left {
   height: 2px;
 }
 h1 .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h2 {
+  color: #151515;
+  display: block;
+  font: 300 30px/30px 'Roboto', sans-serif;
+}
+h2 .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h2 .heading-center {
   position: relative;
   margin: 10px auto;
   width: 10%;
@@ -164,13 +204,11 @@ h1 .heading-center {
   resize: none;
 }
 .contact-section input[type="submit"] {
-  float: right;
-  border: 1px solid;
   font: 400 16px/16px 'Roboto', sans-serif;
   text-align: center;
   padding: 20px 25px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  position: relative;
   background: none;
   color: #3cafe6;
   border-color: #3cafe6;
@@ -196,48 +234,6 @@ footer {
 }
 header {
   /* Slider */
-  /*#upcoming-event {
-    background-color: @white-color;
-    .container-fluid {
-      box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
-    }
-    .left-shell,.right-shell {
-      .transition(.5s);
-
-      padding: 20px 0 30px 0;
-      border-right: 1px solid #ebebeb;
-      font-size: 18px;
-      !*float: right;*!
-      //width: 100%;
-      display: flex;
-      .icon {
-        //width: 20%;
-        font-size: 35px !important;
-        padding: 0px 20px;
-      }
-      .text-shell {
-        //width: 80%;
-        h5 {
-          color: @primary-color !important;
-          font-weight: 700;
-        }
-        p {
-          color: @grey-color;
-        }
-      }
-      @media(min-width:767px) {
-        height: 15vh;
-        .container {
-          padding: 3vh 0;
-        }
-      }
-      &:hover {
-        background-color: @dull-color;
-        cursor: pointer;
-      }
-    }
-
-  }*/
 }
 header .carousel-indicators {
   display: none;
@@ -292,6 +288,9 @@ header a.button:hover {
   height: auto;
   padding-top: 80px;
   background: #fff;
+}
+.about-section .text-shell {
+  padding: 10px;
 }
 .about-section .tag-line {
   font: 300 24px/30px 'Roboto', sans-serif;
@@ -401,40 +400,6 @@ header a.button:hover {
   padding-bottom: 50px;
   text-align: center;
   background: #fff;
-  /*figure {
-    !*width: 295px;
-    height: 270px;*!
-
-    @media screen and (min-width: 540px) {
-      width: 300px;
-      height: auto;
-    }
-    &:focus img,&:hover img {
-      -moz-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-    &:hover img:before,
-    &:focus img:before {
-      display: block;
-    }
-  }*/
-  /*img {
-    width:100%;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-     &::before {
-       content: "";
-       display: none;
-       height: 100%;
-       width: 100%;
-       position: absolute;
-       top: 0;
-       left: 0;
-       background-color: rgba(52, 73, 94, 0.75);
-     }
-  }*/
 }
 .gallery-section a {
   display: block;
@@ -461,7 +426,7 @@ header a.button:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -509,36 +474,6 @@ header a.button:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*.event-main {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    .shell {
-      background-color: @white-color;
-      height: 90%;
-
-      @media (min-width: 576px) {
-
-        padding: 10px;
-        width: 315px;
-      }
-    }
-  }*/
-  /*.owl-carousel {
-    .event {
-      background-color: @secondary-color;
-      margin: 10px;
-      min-height: 200px;
-    }
-  }
-
-  .owl-dot:hover > span, .owl-dot.active > span{
-    background: #f47e4b !important;
-  }*/
 }
 .events-section .events {
   padding-top: 50px;
@@ -563,23 +498,23 @@ header a.button:hover {
 .events-section .events .event {
   margin: 10px 0px;
   background-color: #fff;
-  height: 165px;
+  height: 120px;
 }
 .events-section .events .event .image-box {
-  width: 100%;
   overflow: hidden;
+  height: 100%;
 }
 .events-section .events .event .image-box img {
-  width: 100%;
+  height: 100%;
 }
 .events-section .events .event .image-box .date {
   padding: 4px 0;
-  width: 90px;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 0px;
   margin: auto;
   font: 500 30px/30px 'Roboto', sans-serif;
   color: #fff;
@@ -624,6 +559,9 @@ header a.button:hover {
 }
 .events-section .upcoming-event {
   border-top: solid #3cafe6 3px;
+  border-width: 3px 0 0 0;
+  border-color: #3cafe6;
+  border-style: solid;
   padding: 100px 20px;
   height: 100%;
   width: 100%;
@@ -631,7 +569,6 @@ header a.button:hover {
 }
 .events-section .upcoming-event .shell {
   background-color: #fff;
-  min-width: 320px;
   padding: 50px 10px;
 }
 .events-section .upcoming-event .shell .text-box h3 {
@@ -685,7 +622,7 @@ header a.button:hover {
   background-size: cover;
 }
 .news-letter-section .shell {
-  padding: 10px 0 0 0;
+  padding: 10px 10px;
 }
 .news-letter-section h4 {
   color: #3cafe6;
@@ -694,7 +631,6 @@ header a.button:hover {
 .news-letter-section p {
   font-size: 15px;
   padding: 5px;
-  margin: 0 0 2px 0 !important;
   color: #fff;
 }
 .news-letter-section input,
@@ -714,17 +650,3 @@ header a.button:hover {
   color: #fff;
   cursor: pointer;
 }
-/* My Gallery */
-/*@media (min-width:900px)
-{
-
-
-  .my-gallery {
-
-
-    display:flex;
-    flex-flow: row wrap;
-    justify-content:space-between;
-    align-items:center;
-  }
-}*/
