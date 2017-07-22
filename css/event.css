@@ -124,6 +124,25 @@ h2 .heading-center {
   background-color: #3cafe6;
   height: 2px;
 }
+h3 {
+  color: #151515;
+  display: block;
+}
+h3 .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h3 .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
 .contact-section {
   border-top: solid #3cafe6 3px;
   height: auto;

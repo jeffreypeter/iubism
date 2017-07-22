@@ -300,7 +300,7 @@ header {
     padding-bottom: 50px;
 
     @media(min-width: @lg-width) {
-      min-height: 80vh;
+      min-height: 50vh;
       //overflow: hidden;
     }
     #view-all {
@@ -387,13 +387,22 @@ header {
       background-color: @white-color;
       padding: 50px 10px;
       .text-box {
+        .tag-line {
+          font: 300 18px/24px 'Roboto', sans-serif;
+          color: #6b6b6b;
+          display: block;
+          padding: 15px 10px;
+        }
         h3 {
           text-align: center;
           color: #605f64;
           font: 700 20px/30px 'Roboto', sans-serif;
           padding: 0 0 10px 0;
+          .heading-center {
+            width: 50% !important;
+          }
         }
-        .date {
+        .info {
           color: @primary-color;
           display: block;
           text-align: center;
@@ -403,7 +412,7 @@ header {
         p {
           font: 400 16px/24px 'Roboto', sans-serif;
           color: #6b6b6b;
-          margin: 0 0 20px 0;
+          margin: 0 0 10px 0;
           text-align: center;
           padding: 10px;
         }

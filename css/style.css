@@ -124,6 +124,25 @@ h2 .heading-center {
   background-color: #3cafe6;
   height: 2px;
 }
+h3 {
+  color: #151515;
+  display: block;
+}
+h3 .heading-left {
+  margin: 10px 0;
+  width: 80%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
+h3 .heading-center {
+  position: relative;
+  margin: 10px auto;
+  width: 10%;
+  display: block;
+  background-color: #3cafe6;
+  height: 2px;
+}
 .contact-section {
   border-top: solid #3cafe6 3px;
   height: auto;
@@ -481,7 +500,7 @@ header a.button:hover {
 }
 @media (min-width: 992px) {
   .events-section .events {
-    min-height: 80vh;
+    min-height: 50vh;
   }
 }
 .events-section .events #view-all {
@@ -571,13 +590,22 @@ header a.button:hover {
   background-color: #fff;
   padding: 50px 10px;
 }
+.events-section .upcoming-event .shell .text-box .tag-line {
+  font: 300 18px/24px 'Roboto', sans-serif;
+  color: #6b6b6b;
+  display: block;
+  padding: 15px 10px;
+}
 .events-section .upcoming-event .shell .text-box h3 {
   text-align: center;
   color: #605f64;
   font: 700 20px/30px 'Roboto', sans-serif;
   padding: 0 0 10px 0;
 }
-.events-section .upcoming-event .shell .text-box .date {
+.events-section .upcoming-event .shell .text-box h3 .heading-center {
+  width: 50% !important;
+}
+.events-section .upcoming-event .shell .text-box .info {
   color: #3cafe6;
   display: block;
   text-align: center;
@@ -587,7 +615,7 @@ header a.button:hover {
 .events-section .upcoming-event .shell .text-box p {
   font: 400 16px/24px 'Roboto', sans-serif;
   color: #6b6b6b;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   text-align: center;
   padding: 10px;
 }
