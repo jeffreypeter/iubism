@@ -12,7 +12,7 @@
 
     <meta name="author" content="Jeffrey">
 
-    <title>BISM Airport Pickup Service Response</title>
+    <title>International Welcome Banquet Volunteer Registration</title>
 
     <!-- Fonts -->
 
@@ -106,7 +106,7 @@
 
     <a class="breadcrumb-item" href="#">Events</a>
 
-    <span class="breadcrumb-item active">Airport Pickup</span>
+    <span class="breadcrumb-item active">International Welcome Banquet Volunteer Registration</span>
 
 </nav>
 
@@ -118,7 +118,7 @@
 
             <div class="col-lg-12">
 
-                <div class="image-holder" style='background-image: url("../images/events/airport/airportpick.jpg");'>
+                <div class="image-holder" style='background-image: url("../images/events/iwb/banqueth.jpg");'>
 
                 </div>
 
@@ -136,9 +136,7 @@
 
         <div class="row">
 
-            <h1 class="text-left">Airport Pickup Service
-
-Registration Acknowledgement<span class="heading-left"></span></h1>
+            <h1 class="text-left">International Welcome Banquet Volunteer Registration<span class="heading-left"></span></h1>
 
         </div>
 
@@ -150,19 +148,17 @@ Registration Acknowledgement<span class="heading-left"></span></h1>
 
                     <div class="col-lg-5">
 
-                      <center>  <img  border="0"  hspace="10" src="../images/events/airport/airportgroup.jpg" height="300" width ="200"></center>
-
                     </div>
 
                     <div class="col-lg-8">
 
                         <p class="tag-line">
 
-                            Dear Airport Pickup Service registrant:<br><br>
+                            Dear Banquet volunteer,<br><br>
 
 
 
-Thanks for registering for the Airport Pickup Service.
+Thanks for registering to volunteer at the International Welcome Banquet.
 
 </p>
 
@@ -171,50 +167,36 @@ Thanks for registering for the Airport Pickup Service.
 
 
 
+<br>
 
-A confirmation email with a record of all the information you submitted has been sent to the email address you provided. If you do not receive the confirmation message within a few minutes of signing up, please check your Junk E-mail folder just in case the email got delivered there instead of your inbox. We recommend that you add elan@ifmusa.org to your 'Approved Sender' list, within your email reader.
-
-<br><br>
-
-Please check to see that all the information submitted above are accurate. If not email Elan Rajamani (<a href="mailto:elan@ifmusa.org">elan@ifmusa.org</a>) with the corrections right away.
+An email with your sign up information has been sent to you. Please verify that the information on the email is accurate. Email Elan at <a href="mailto:elan@ifmusa.org">elan@ifmusa.org</a> if there are any changes needed in your signup.
 
 <br><br>
 
-The pickup is either at 3:00pm or 11:00pm as requested by you. Pickup location is highlighted in the map below. Please wait for the next pickup if you miss your requested pickup or take the shuttle service offered at the airport.  <a href="http://www.bloomingtonshuttle.com/airport_shuttle_schedule"> <font color="#008000">Go Express Travel</font></a> offers low cost shuttle service to Bloomington every 2 hours from 6:40am to 10:40pm.
-
-<br><br>
-
-If you have any questions, please contact me. Thanks.
-
-
-
-
+Guidelines for Table Hosts is found at&nbsp;<a href="http://www.iubism.org/pdf/Table-Hosts-Guidelines-iwb2017.pdf">www.iubism.org/pdf/Table-Hosts-Guidelines-iwb2017.pdf</a><a href="http://www.iubism.org/pdf/Table-Hosts-Guidelines-iwb2017.pdf">&nbsp;</a>
 
 <br><br>
 
 
 
-Elan Rajamani<br>
+Please contact Brian Arnold at 812-606-0907&nbsp;or <a href="mailto:bearnold01@gmail.com">bearnold01@gmail.com</a>&nbsp;if you have any questions.
 
-Email: <a href="mailto:elan@ifmusa.org">elan@ifmusa.org</a><br>
+<br>
+Thanks for your participation. We look forward to seeing you at the International Welcome Banquet.
 
-Phone: 812-325-9047<br>
-
-
-
-
+Please contact Elan Rajamani at 812-325-9047 or email at <a href="mailto:elan@ifmusa.org">elan@ifmusa.org</a> if you have questions.
 
 <br>
 
-<h2><center>Pickup Location </center></h2>
+Blessings,
+<br>
+Elan Rajamani<br>
+<a href="mailto:elan@ifmusa.org">elan@ifmusa.org</a><br>
+812-325-9047
 
-<img class="card-img-top" src="../images/events/airport/pickup-location.gif" alt="Card image cap">
-
-<br><br>
+  
 
 
-
-<h4>Please print a copy of this notice for your information.</h4>
 
 
 
@@ -229,6 +211,8 @@ Phone: 812-325-9047<br>
                 
 
             </div>
+
+			
 
            
 
@@ -275,127 +259,73 @@ Phone: 812-325-9047<br>
 <!-- Contact Section -->
 
 <section id="contact" class="contact-section">
-
     <div class="container">
-
         <div class="row">
-
             <div class="col-sm-6 col-md-6">
-
                 <div class="container">
-
-                    <form method="post" action="sendmail.php">
-
+                    <form id="ajax-contact" method="post"  role="form" action="../sendmail.php">
                         <h4 class="text-center text-sm-left text-bold">Get in touch</h4>
-
                         <div class="row">
+  			 <div class="col-md-12">
+				<div id="form-messages" style="color: #ADD8E6; text-align:center;font-weight:bold;"></div>
+			</div>
 
                             <div class="col-md-6">
-
-                                <input type="text" placeholder="Name*" required="" name="name">
-
+                                <input type="text" id="name" placeholder="Name*" required="" name="name">
                             </div>
-
                             <div class="col-md-6">
-
-                                <input type="email" placeholder="Email*" required="" name="email">
-
+                                <input type="email" id="email"  placeholder="Email*" required="" name="email">
                             </div>
-
                             <div class="col-md-6">
-
-                                <input type="tel" placeholder="Phone*" required="" name="phone">
-
+                                <input type="tel" id="phone" placeholder="Phone*" required="" name="phone">
                             </div>
-
                             <div class="col-md-6">
-
-                                <input type="text" placeholder="Subject*" required="" name="subject">
-
+                                <input type="text"  id="subject" placeholder="Subject*" required="" name="subject">
                             </div>
-
                             <div class="col-md-12">
-
-                                <textarea required="" cols="10" rows="10" placeholder="Your Message"
-
+                                <textarea required="" id="message" cols="10" rows="10" placeholder="Your Message"
                                           name="message"></textarea>
-
                             </div>
-
                             <div class="col-md-12">
 
-                                <input type="submit" class="form-control" value="Send Message">
 
+
+                                 <input type="submit" class="form-control" value="Send Message">
                             </div>
-
                         </div>
-
                     </form>
-
                 </div>
-
             </div>
-
             <div class="col-sm-6 text-left">
-
                 <div class="footer-address-box">
-
                     <h4 class="text-center text-sm-left">Contact&nbsp;us</h4>
-
                     <address>
-
                         <ul class="list-unstyled">
-
                             <li><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>IMU Room 772, 900 E. 7th
-
                                 Street, IN 47405</strong></li>
-
                             <li><i class="fa fa-mobile" aria-hidden="true"></i>
-
                                 <p>+1 (812) 325-9047 - Main Contact </p></li>
-
                             <li><i class="fa fa-envelope-o" aria-hidden="true"></i>
-
                                 <p><a class="link" href="mailto:elan@ifmusa.org">elan@ifmusa.org</a> <a class="link"
-
                                                                                                         href="mailto:huffed@indiana.edu">huffed@indiana.edu</a>
-
                                 </p></li>
-
                         </ul>
-
                     </address>
-
                     <h4 class="text-center text-sm-left">Follow&nbsp;Us:</h4>
-
                     <ul class="list-inline justify-content-sm-start justify-content-center icon-social">
-
                         <li class="list-inline-item"><a href="http://www.facebook.com/iubism" class="icon-md"><i
-
                                 class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-
                         <li class="list-inline-item"><a href="http://www.twitter.com/iubism" class="icon-md"><i
-
                                 class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-
                         <li class="list-inline-item"><a href="http://www.instagram.com/iubism" class="icon-md"><i
-
                                 class="fa fa-instagram" aria-hidden="true"></i></a></li>
-
                     </ul>
-
                     <div class="footer-map-box">
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 

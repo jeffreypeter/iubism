@@ -1,7 +1,12 @@
 /* Variables for less*/
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
   width: 100%;
   height: 100%;
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   background-color: #151515;
@@ -40,7 +45,7 @@ body .carousel-item-prev {
   }
 }
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .navbar a {
   font-weight: 400;
@@ -62,6 +67,9 @@ body .carousel-item-prev {
 }
 .no-border {
   border: none !important;
+}
+.center-block {
+  margin: 0 auto;
 }
 a:hover,
 a:focus {
@@ -150,6 +158,12 @@ h3 .heading-center {
   display: block;
   background-color: #3cafe6;
   height: 2px;
+}
+.tag-line {
+  font: 300 24px/30px 'Roboto', sans-serif;
+  color: #6b6b6b;
+  display: block;
+  padding: 0 0 5px 0;
 }
 .contact-section {
   border-top: solid #3cafe6 3px;
@@ -258,4 +272,88 @@ footer {
   background: rgba(0, 0, 0, 0.86);
   text-align: center;
   padding: 5px 0px ;
+}
+body {
+  background-color: #fff;
+}
+section {
+  padding: 40px 2px 40px 2px;
+  min-height: 50vh;
+}
+section .card {
+  margin: 10px 0px 10px 0px;
+}
+.about-section {
+  background-color: #fff;
+}
+.services-section {
+  background-color: #151515;
+}
+.leader-section {
+  background-color: #f1f1f1;
+}
+.leader-section .card .card-img-top {
+  width: 100%;
+}
+.leader-section h1 .heading-center {
+  width: 50%;
+}
+.student-section {
+  background-color: #3cafe6;
+}
+.student-section h1 {
+  color: #fff;
+  display: block;
+}
+.student-section h1 .heading-center {
+  background-color: #f47e4b;
+  width: 50% !important;
+}
+.student-section .owl-carousel .item .image-holder {
+  max-height: 200px;
+  overflow: hidden;
+  line-height: 200px;
+  min-width: 90px;
+}
+.student-section .owl-carousel .item .image-holder img {
+  display: inline-block;
+  vertical-align: middle;
+  border-width: 2px 2px 2px 2px;
+  border-color: #fff;
+  border-style: solid;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+}
+.student-section .owl-carousel .item:hover .image-holder img {
+  webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 90px;
+  height: 90px;
+}
+.student-section .owl-carousel .owl-item.center .item .image-holder img {
+  width: 150px;
+  height: 150px;
+}
+.student-section .owl-carousel .owl-dot span {
+  background-color: #fff;
+}
+.student-section .owl-carousel .owl-dot.active span {
+  background-color: #f47e4b;
+}
+.partners-section {
+  background-color: #fff;
+}
+.partners-section .card .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.partners-section .card .card-img-overlay .card-footer {
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  margin: 0 0 20px 0;
+  padding: 0px;
 }

@@ -1,0 +1,110 @@
+@import "site-wide";
+body {
+  background-color: @white-color;
+}
+section {
+  padding: 40px 2px 40px 2px;
+  min-height: 50vh;
+  .card {
+    margin: 10px 0px 10px 0px;
+  }
+  @media screen and (min-width: @sm-width) {
+
+  }
+
+}
+.about-section {
+  background-color: @white-color;
+}
+.services-section {
+  background-color: @black-color;
+}
+.leader-section {
+  background-color: @dull-color;
+  .card {
+    .card-img-top {
+      width: 100%; // 300:400
+    }
+  }
+  h1 {
+    .heading-center {
+      width: 50%;
+    }
+  }
+}
+.student-section {
+  background-color: @primary-color;
+  h1 {
+    color: @white-color;
+    display: block;
+    .heading-center {
+      background-color: @secondary-color;
+      width: 50% !important;
+    }
+  }
+  .owl-carousel {
+    .item {
+      .image-holder {
+        max-height: 200px;
+        overflow: hidden;
+        line-height: 200px;
+        min-width: 90px;
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          .border(2px,2px,2px,2px,@white-color);
+
+          width: 84px;
+          height: 84px;
+          border-radius: 50%;
+        }
+      }
+      &:hover {
+        .image-holder {
+          img {
+            .transition(.2s);
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+    .owl-item.center {
+      .item{
+        .image-holder{
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+    .owl-dot {
+      span {
+        background-color: @white-color;
+      }
+    }
+    .owl-dot.active {
+      span {
+        background-color: @secondary-color;
+      }
+    }
+  }
+}
+
+.partners-section {
+  background-color: @white-color;
+  .card {
+    .card-img-overlay {
+      background-color: rgba(0,0,0,.7);
+      .card-footer {
+        border: none;
+        position: absolute;
+        bottom: 0px;
+        margin: 0 0 20px 0;
+        padding: 0px;
+      }
+    }
+
+  }
+}
