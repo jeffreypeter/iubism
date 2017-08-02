@@ -18,16 +18,23 @@
 @lg-width:992px;
 @xl-width:1200px;
 @font-family:'Roboto', sans-serif;
-
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
   width: 100%;
   height: 100%;
+  position: relative;
   font-family: @font-family;
   font-weight: 400;
   background-color: @black-color;
   line-height: 1.7;
   .primary-color {
     color: @primary-color;
+  }
+  .white-color-bg {
+    background-color: @white-color;
   }
   .navbar-toggler {
     z-index: 1;
@@ -48,7 +55,7 @@ body {
 /* Navigation */
 @media(min-width:767px) {
   .navbar {
-    padding: 20px 0;
+    padding: 10px 0;
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -78,13 +85,6 @@ body {
     color: @primary-color !important;
   }
 }
-
-
-a:hover,a:focus {
-  color: @secondary-color;
-  text-decoration: none !important;
-}
-
 .no-padding {
   padding: 0px !important;
 }
@@ -100,6 +100,14 @@ a:hover,a:focus {
   -o-transition: all @seconds ease-in-out;
   transition: all @seconds ease-in-out;
 }
+
+a:hover,a:focus {
+  color: @secondary-color;
+  text-decoration: none !important;
+  .transition(.4s)
+}
+
+
 
 .border-primary(@top, @right,@bottom,@left) {
   border-width: @top @right @bottom @left;

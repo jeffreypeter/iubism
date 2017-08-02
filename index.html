@@ -46,22 +46,23 @@
         body {
             position: relative;
         }
+
         .my-gallery figcaption {
             display: none;
         }
     </style>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="50">
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" role="navigation">
+<nav id="navbar" class="navbar fixed-top navbar-toggleable-md navbar-inverse" role="navigation">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#topNavbar"
             aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="container">
-        <a class="navbar-brand nav-link" href="#">BISM</a>
+        <a class="navbar-brand" href="#">BISM</a>
         <div class="collapse navbar-collapse" id="topNavbar">
-            <ul class="navbar-nav ml-auto">
+            <ul class="nav navbar-nav ml-auto nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#page-top" data-toggle="collapse"
                        data-target=".navbar-collapse.show">Home</a>
@@ -70,9 +71,6 @@
                     <a class="nav-link" href="#about" data-toggle="collapse"
                        data-target=".navbar-collapse.show">About</a>
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="#events" data-toggle="collapse"
                        data-target=".navbar-collapse.show">Events</a>
@@ -88,60 +86,62 @@
     </div>
 </nav>
 <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <!-- <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
-        </ol>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>-->
         <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('images/carousel/images.jpeg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <font size="50" face="Cursive"> <b> WOW </b></font><br>
-                    <img src="images/wow.jpg"><br>
-                    <font face="Cursive" size="30">Weeks of Welcome</font>
-                    <center>Weeks of fun events and helpful services to allow new internationals
-                        to make new friends and adapt to life in Bloomington.
-                    </center>
-                    <br>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>July 26 - Sep 30
-                    <p>
-                        <br>
-                    <center><b>Participate in fun & practical activities:</b></center>
-                    <br>
-                    <i class="fa fa-plane" aria-hidden="true"></i>&nbsp;&nbsp;<a href="events/airport.html">Airport
-                    Pickup Service</a> &nbsp;&nbsp;&nbsp;<i class="fa fa-bed" aria-hidden="true"></i>&nbsp;&nbsp;<a
-                        href="events/furniture2017.html">&nbsp;&nbsp;Furniture Giveaway</a>&nbsp;&nbsp;<i
-                        class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;<a href="">Grocery Shopping</a>&nbsp;&nbsp;<i
-                        class="fa fa-futbol-o" aria-hidden="true"></i>&nbsp;&nbsp;<a href="">Hiking</a>&nbsp;&nbsp;<i
-                        class="fa fa-apple" aria-hidden="true"></i>&nbsp;&nbsp;<a href="">Apple Picking</a><br>
-                    <br>
-                    Registration for Airport Pickups & Furniture GiveAway is now open.More information & online
-                    registration for other events will be available soon.
+            <div class="carousel-item active" style="background-image: url('images/carousel/wow-slider.jpg')">
+                <div class="carousel-caption">
+                    <h1>WOW <span class="heading-center"></span></h1>
+                    <h3>Weeks of Welcome</h3>
+                    <p class="desc">
+                        Weeks of fun events and helpful services to allow new internationals to make new friends and
+                        adapt to life in Bloomington.
                     </p>
-                    <!--<a href="events/furniture2017.html" class="button">Read More</a>  -->
+                    <p class="desc">
+                        <span><i class="fa fa-calendar" aria-hidden="true"></i> 26 July - 30 September</span>
+                    </p>
+                    <ol class="links list-unstyled d-flex flex-wrap justify-content-center">
+                        <li><i class="fa fa-plane" aria-hidden="true"></i><a href="events/airport.html">Airport
+                            Pickup</a></li>
+                        <li><i class="fa fa-bed" aria-hidden="true"></i><a href="events/furniture2017.html">Furniture
+                            Giveaway</a></li>
+                        <li><i class="fa fa-shopping-cart" aria-hidden="true"></i><a href="events/walmart.html">Walmart
+                            Shopping</a></li>
+                        <li><i class="fa fa-futbol-o" aria-hidden="true"></i><a href="events/hiking.html">Hiking</a>
+                        </li>
+                        <li><i class="fa fa-apple" aria-hidden="true"></i><a href="events/apple.html">Apple Picking</a>
+                        </li>
+                    </ol>
                 </div>
             </div>
-            <div class="carousel-item active" style="background-image: url('images/carousel/slider-5.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="primary-color"><a href="events/airport.html">BISM Airport Pickup</a></h5>
-                    <p>Airport Pickup Service for New International Students of Indiana University&nbsp; <i
-                            class="fa fa-calendar" aria-hidden="true"></i>&nbsp; July 26 - August 9, 2017&nbsp; <i
-                            class="fa fa-circle" aria-hidden="true"></i>&nbsp; Two Pickup times daily: 3:00pm and
-                        11:00pm
-                    </p>
+            <div class="carousel-item" style="background-image: url('images/carousel/slider-5.jpg')">
+                <div class="carousel-caption">
+                    <h2>BISM Airport Pickup<span class="heading-center"></span></h2>
+                    <p class="desc hidden-sm-down">Airport Pickup Service for New International Students of Indiana
+                        University</p>
+                    <ol class="links list-unstyled d-flex flex-wrap justify-content-center">
+                        <li><i class="fa fa-calendar" aria-hidden="true"></i>July 26 - August 9, 2017</li>
+                        <li><i class="fa fa-refresh" aria-hidden="true"></i>Two Pickup times daily: 3:00pm and 11:00pm
+                        </li>
+                    </ol>
                     <a href="events/airport.html" class="button">Read More</a>
                 </div>
             </div>
             <div class="carousel-item" style="background-image: url('images/carousel/slider-6.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="primary-color"><a href="events/furniture2017.html">International Furniture Giveaway</a>
-                    </h5>
-                    <p>For New International Students of Indiana University&nbsp; <i class="fa fa-calendar"
-                                                                                     aria-hidden="true"></i>&nbsp;August
-                        19, 2017 &nbsp;<i class="fa fa-location-arrow" aria-hidden="true"></i>&nbsp; South Entrance |
-                        Sherwood Oaks Christian Church | 2700 E. Rogers Rd</p>
+                <div class="carousel-caption">
+                    <h2>International Furniture Giveaway<span class="heading-center"></span></h2>
+                    <p class="desc hidden-sm-down">For New International Students of Indiana University</p>
+                    <ol class="links list-unstyled d-flex flex-wrap justify-content-center">
+                        <li><i class="fa fa-calendar" aria-hidden="true"></i> August 19, 2017</li>
+                        <li><i class="fa fa-location-arrow" aria-hidden="true"></i>South Entrance, Sherwood Oaks
+                            Christian Church, 2700 E. Rogers Rd
+                        </li>
+                    </ol>
                     <a href="events/furniture2017.html" class="button">Read More</a>
                 </div>
             </div>
@@ -169,41 +169,11 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <!--<div id="upcoming-event">
-        <div class="container-fluid">
-            &lt;!&ndash;<div class="row">
-                <div class="col-sm-12">
-                    <h4>
-                        Upcoming Event
-                    </h4>
-                </div>
-            </div>&ndash;&gt;
-            <div class="row">
-                <div class="col-sm-6 text-sm-left no-padding">
-                    <a class="left-shell justify-content-start justify-content-sm-center" href="#">
-                        <span class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
-                        <div class="text-shell">
-                            <h5>Spotlight on Summer (SOS)</h5>
-                            <p>Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 text-sm-left no-padding">
-                    <a class="right-shell justify-content-start justify-content-sm-center" href="#">
-                        <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                        <div class="text-shell">
-                            <h5>Furniture Give-Away</h5>
-                            <p>Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>-->
 </header>
 <!-- About -->
 <section id="about" class="about-section">
     <div class="container">
+        <!--<div class="row hidden-sm-up visible"><h1>About Us<span class="heading-left">&nbsp;</span></h1></div>-->
         <div class="row">
             <div class="col-sm-4 photo-swipe" itemscope itemtype="http://schema.org/ImageGallery">
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -273,7 +243,7 @@
         </div>
     </div>
 </section>
-<!-- Events -->
+
 <section id="events" class="events-section">
     <div class="container">
         <div class="row">
@@ -283,47 +253,49 @@
                         <h1 class="text-left">Our Events<span class="heading-left">&nbsp;</span></h1>
                         <!--<div id="view-all"><a href="">View all Events</a></div>-->
                     </div>
-                    <div class="event row">
-                        <div class="image-box col-3 no-padding">
-                            <img src="images/events/sos.gif" border="1">
-                            <span class="date">26 <span>Jul</span></span>
+                    <div class="event row d-flex justify-content-start flex-nowrap">
+                        <div class="image-box">
+                            <span><img src="images/events/airport.jpg"></span>
+                            <span class="date">26<span>Jul&nbsp;-&nbsp;</span>09<span>Aug</span></span>
                         </div>
-                        <div class="col-9">
-                            <div class="text-box">
-                                <a href="events/sos.html">Spotlight on Summer(SOS)</a> <span>Wednesday, 7:30 pm - 9:30 pm House of Elan & Rani Rajamani </span>
-                                <a href="events/sos.html" class="button">Read More<i class="fa fa-angle-right"
-                                                                                     aria-hidden="true"></i></a></div>
-                        </div>
-                        <div class="info-box" style="display: none">
+                        <div class="text-box">
+                            <a href="events/airport.html">BISM Airport Pickups</a> <span>Register Now for Free Pickup from Indianapolis Airport to Bloomington </span>
+                            <a href="events/airport.html" class="button">Read More <i class="fa fa-angle-right"
+                                                                                      aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="event row">
-                        <div class="image-box col-3 no-padding">
-                            <img src="images/events/airport.jpg">
-                            <span class="date">26<span>Jul - </span>9 <span>Aug</span></span>
+                    <div class="event row d-flex justify-content-start flex-nowrap">
+                        <div class="image-box">
+                            <img src="images/events/walmart.jpg">
+                            <span class="date">7<span>Aug- </span>10 <span>Aug</span></span>
                         </div>
-                        <div class="col-9">
-                            <div class="text-box">
-                                <a href="events/airport.html">BISM Airport Pickups</a> <span>Register Now for Free Pickup from Indianapolis Airport to Bloomington </span>
-                                <a href="events/airport.html" class="button">Read More <i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box" style="display: none">
+                        <div class="text-box">
+                            <a href="events/walmart.html">Walmart Shopping Trip</a> <span>Register Now for Free Transportation to WalMart Superstore</span>
+                            <a href="events/walmart.html" class="button">Read More <i class="fa fa-angle-right"
+                                                                                      aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="event row">
-                        <div class="image-box col-3 no-padding">
+                    <div class="event row d-flex justify-content-start flex-nowrap">
+                        <div class="image-box">
                             <img src="images/events/fga.gif">
                             <span class="date">19 <span>Aug</span></span>
                         </div>
-                        <div class="col-9">
-                            <div class="text-box">
-                                <a href="events/furniture2017.html">International Furniture Give-Away</a> <span>Pre-Register Now to get Free Furniture. </span>
-                                <a href="events/furniture2017.html" class="button">Read More <i
-                                        class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+
+                        <div class="text-box">
+                            <a href="events/furniture2017.html">International Furniture Give-Away</a> <span>Pre-Register Now to get Free Furniture. </span>
+                            <a href="events/furniture2017.html" class="button">Read More <i
+                                    class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
-                        <div class="info-box" style="display: none">
+                    </div>
+                    <div class="event row d-flex justify-content-start flex-nowrap">
+                        <div class="image-box">
+                            <img src="images/events/hiking.jpg" border="1">
+                            <span class="date">4 <span>Sept</span></span>
+                        </div>
+                        <div class="text-box">
+                            <a href="events/hiking.html">Hiking to McCormick's </a> <span>Monday September 4 (Labor Day Holiday) </span>
+                            <a href="events/hiking.html" class="button">Read More<i class="fa fa-angle-right"
+                                                                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -332,9 +304,12 @@
                 <div class="upcoming-event">
                     <div class="shell">
                         <div class="text-box">
-                            <h3 class="title">International Coffee Hour<span class="heading-center"></span></h3> <p class="info"><span>Every Sunday 9:30am. R362 Sherwood Oaks Christian Church</span></p>
+                            <h3 class="title">International Coffee Hour<span class="heading-center"></span></h3>
+                            <p class="info"><span>Every Sunday 9:30am. R362 Sherwood Oaks Christian Church</span></p>
                             <p class="text-center">International Coffee Hour is an opportunity to
-                                connect with other internationals and Americans to explore the message of the Bible, Christianity and Jesus.</p><p class="tag-line">Join us for a time of
+                                connect with other internationals and Americans to explore the message of the Bible,
+                                Christianity and Jesus.</p>
+                            <p class="tag-line">Join us for a time of
                                 refreshments, socializing & discussing the Bible in a relaxed atmosphere.</p>
                             <a href="http://www.i-connections.org/coffee/" class="button">See full Detail</a>
                         </div>
@@ -346,34 +321,32 @@
 </section>
 <section class="news-letter-section">
     <div class="container text-center">
-        <div class="row">
-            <div class="shell">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h4 class="text-sm-left">BISM Newsletter</h4>
-                    </div>
+        <div class="shell">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="text-sm-left">BISM Newsletter</h4>
                 </div>
-                <div class="row ">
-                    <div class="col-sm-7 col-md-8">
-                        <p class="text-left">Sign up for the free Email newsletter and we'll keep you informed about
-                            BISM events and activities.</p>
-                    </div>
-                    <div class="col-sm-5 col-md-4">
-                        <form class="form-inline"
-                              action="http://zc1.maillist-manage.com/ua/Optin?od=11287eca3ad035&amp;opDgs=7200cd3a4fff9f7a888b227363dd4186cbad3f9c5f6454d4&amp;lD=13f2ca281659a9f&amp;n=11699f74d37d896"
-                              method="POST" target="_blank">
-                            <div class="input-group">
-                                <input type="email" class="form-control" aria-describedby="emailHelp"
-                                       placeholder="your@email.com" name="optinEmail" required="">
-                                <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="submit"><i class="fa fa-envelope-o"
-                                                                                           aria-hidden="true"></i></button>
-                                    </span>
-                            </div>
-                        </form>
-                    </div>
-                    <!--<small class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+            </div>
+            <div class="row ">
+                <div class="col-sm-7 col-md-8">
+                    <p class="text-left">Sign up for the free Email newsletter and we'll keep you informed about
+                        BISM events and activities.</p>
                 </div>
+                <div class="col-sm-5 col-md-4">
+                    <form class="form-inline"
+                          action="http://zc1.maillist-manage.com/ua/Optin?od=11287eca3ad035&amp;opDgs=7200cd3a4fff9f7a888b227363dd4186cbad3f9c5f6454d4&amp;lD=13f2ca281659a9f&amp;n=11699f74d37d896"
+                          method="POST" target="_blank">
+                        <div class="input-group">
+                            <input type="email" class="form-control" aria-describedby="emailHelp"
+                                   placeholder="your@email.com" name="optinEmail" required="">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="submit"><i class="fa fa-envelope-o"
+                                                                                       aria-hidden="true"></i></button>
+                                </span>
+                        </div>
+                    </form>
+                </div>
+                <!--<small class="form-text text-muted">We'll never share your email with anyone else.</small>-->
             </div>
         </div>
     </div>
@@ -751,6 +724,9 @@
 <script type="application/javascript">
     // execute above function
     initPhotoSwipeFromDOM('.photo-swipe');
+    $('body').scrollspy({
+        target: '#navbar'
+    })
 </script>
 </body>
 </html>

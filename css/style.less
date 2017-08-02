@@ -2,29 +2,27 @@
 
 header {
   /* Slider */
-
   .carousel-indicators {
     display: none;
   }
   .carousel-item {
 
-    min-height: 300px;
+    height: 100vh;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-
-    background-size: contain;
-    @media(min-width: @md-width) {
+    background-size: cover;
+    /*@media(min-width: @md-width) {
 
     }
     @media(min-width: @sm-width) {
       background-size: cover;
       height: 100vh;
-    }
+    }*/
   }
   .carousel-caption {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
     left: 10%;
     right: 10%;
     bottom: 10px;
@@ -33,6 +31,8 @@ header {
   a.button{
     border: solid @primary-color 2px;
     padding: 10px 20px;
+    margin-bottom: 5px;
+    display: inline-block;
     font: 700 14px/14px 'Roboto', sans-serif;
     color: @primary-color;
     text-decoration: none;
@@ -42,7 +42,66 @@ header {
       color: white;
       border-color: @secondary-color;
     }
+  }
+  h1 {
+    color: @white-color;
+    font-size: 10vmin;
+    padding: 10px 0 0 0;
+    margin: 5px;
+    font-weight: 500;
+    .heading-center {
+      @media screen and (min-width: @sm-width) {
+        margin: 20px auto;
+      }
+    }
 
+  }
+  h2 {
+    color: @white-color;
+    font-size: 6vmin;
+    padding: 10px 0 0 0;
+    margin: 5px;
+    font-weight: 400;
+    .heading-center {
+      @media screen and (min-width: @sm-width) {
+        margin: 20px auto;
+      }
+    }
+  }
+  h3 {
+    color: @white-color;
+    font-size: 5vmin;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  p.desc {
+    font-size: 3vmin;
+    @media screen and (min-width: @sm-width) {
+      font-size: 2.5vmin;
+    }
+
+  }
+  ol.links {
+    font-size: 3vmin;
+    padding-bottom: 10px !important;
+    margin: 0px !important;
+    @media screen and (min-width: @sm-width) {
+      font-size: 3vmin;
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 0 5px;
+      }
+      @media screen and (min-width: @sm-width) {
+        padding: 10px;
+      }
+    }
+    i {
+      margin-right:10px;
+    }
   }
 }
 
@@ -152,6 +211,35 @@ header {
     flex-direction: column;
 
   }
+}
+
+.upcoming-event-section {
+  .border-primary(3px,0,0,0);
+  color: @white-color;
+  height: auto;
+  padding: 50px 50px 0 0;
+  h1 {
+    .heading-center {
+      width: 40% !important;
+      background-color: @white-color;
+    }
+  }
+  .event-item {
+    //background-color: @white-color;
+    .image-box {
+      overflow: hidden;
+      background-position: 50%;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      .border-primary(2px,2px,2px,2px);
+      img {
+        //border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 .services-section {
@@ -319,30 +407,34 @@ header {
       background-color: @white-color;
       height: 120px;
       .image-box {
+        position: relative;
         overflow: hidden;
-        height: 100%;
+        min-width: 150px;
+        max-height: 100%;
         img {
-          height: 100%;
+          width: 100%;
         }
-      .date {
-        padding: 4px 0;
-        width: 100%;
-        background: rgba(0,0,0,0.5);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        margin: auto;
-        font: 500 30px/30px 'Roboto', sans-serif;
-        color: #fff;
-        text-align: center;
-        span {
-          font-size: 14px;
+        .date {
+          padding: 4px 0;
+          width: 100%;
+          background: rgba(0,0,0,0.5);
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0px;
+          margin: auto;
+          font: 500 30px/30px 'Roboto', sans-serif;
+          color: #fff;
+          text-align: center;
+          span {
+            font-size: 14px;
+          }
         }
-      }
       }
       .text-box {
         padding: 10px 5px 5px 10px;
+        position: relative;
+        flex-grow: 1;
         a {
           font: 700 20px/20px 'Roboto', sans-serif;
           text-decoration: none;
@@ -364,13 +456,17 @@ header {
           color: @primary-color;
           text-decoration: none;
           text-transform: uppercase;
-          margin: 15px 30px 0 0;
+          margin: 15px 5px 0 0;
           .transition(.3s);
           &:hover {
             color: @secondary-color;
           }
 
         }
+
+      }
+      @media screen and (max-width: @sm-width) {
+        height: auto;
       }
 
     }
