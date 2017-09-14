@@ -1,7 +1,12 @@
 /* Variables for less*/
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
   width: 100%;
   height: 100%;
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   background-color: #151515;
@@ -40,7 +45,7 @@ body .carousel-item-prev {
   }
 }
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .navbar a {
   font-weight: 400;
@@ -62,6 +67,9 @@ body .carousel-item-prev {
 }
 .no-border {
   border: none !important;
+}
+.center-block {
+  margin: 0 auto;
 }
 a:hover,
 a:focus {
@@ -150,6 +158,12 @@ h3 .heading-center {
   display: block;
   background-color: #3cafe6;
   height: 2px;
+}
+.tag-line {
+  font: 300 24px/30px 'Roboto', sans-serif;
+  color: #6b6b6b;
+  display: block;
+  padding: 0 0 5px 0;
 }
 .contact-section {
   border-top: solid #3cafe6 3px;
